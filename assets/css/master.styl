@@ -15,18 +15,44 @@ header h1
     text-align: center;
     font-weight: normal
 
-nav
+nav.main
     fs: 0.9rem
-nav a
+nav.main a
     display: inline-block;
     text-decoration: none;
     font-weight: bold;
     margin-right: 1em;
     color: rgba(0,0,0,0.6);
-    border-bottom: 3px solid white;
-    padding-bottom: 2px;
+    border-bottom: 2px solid white;
+    line-height 1.6em
+    margin-bottom 0.5em
 
-nav a.current
+.lang
+    color rgba(50,50,50,0.5)
+    overflow hidden
+    color rgba(50,50,50,0.5)
+    nav
+        display inline-block
+        width 100%
+        border-bottom 1px solid rgba(50,50,50,0.3)
+        text-align right
+        float right
+        fs: 0.9rem
+        padding 0.25em 0
+        a
+            font-weight bold
+            margin 0 0.5em
+            border-bottom: 2px solid white;
+            padding-bottom: 2px;
+            text-decoration none
+            color rgba(50,50,50,0.5)
+            line-height 1.6em
+            padding-bottom 0
+            border-bottom 2px solid white
+            &.current
+                color rgba(50,50,50,0.8)
+
+nav.main a.current
     color: wyd-red;
     border-bottom: 2px solid wyd-red;
 
@@ -48,23 +74,23 @@ article h3
 p
     paragraph()
 
-.page-letter nav a.current, 
+.page-letter nav.main a.current, 
 .page-letter article h2
     color: wyd-green;
     border-bottom-color: wyd-green  ;
 
-.page-wyd_info nav a.current,
+.page-wyd_info nav.main a.current,
 .page-wyd_info article h2
     color: wyd-yellow;
     border-bottom-color: wyd-yellow
 
-.page-contact nav a.current,
+.page-contact nav.main a.current,
 .page-contact article h2
 	color: wyd-violet
 	border-bottom-color: wyd-violet
 
-.page-news nav a.current,
-.page-news article h2
+.page-program nav.main a.current,
+.page-program article h2
     color: wyd-orange
     border-bottom-color: wyd-orange
 
@@ -109,6 +135,7 @@ article a
     color rgb(100,100,100)
     color rgba(100,100,100,1)
 
+
 footer p, footer a
     color #888
     padding-top 1em
@@ -142,43 +169,16 @@ ul.news
         &:last-child
             border-bottom none
 
-.lang
-    color rgba(50,50,50,0.5)
-    margin 0 1em
-    //box-shadow 0 0 1px rgba(50,50,50,0.3)
-    color rgba(50,50,50,0.5)
-    p
-        display none
-        margin 0
-        fs 0.9rem
-        italic()
-        padding 0.25em
-        color rgba(50,50,50,0.5)
-        padding-left 0
-        line-height 1.6em
-    nav
-        display inline-block
-        width 100%
-        border-bottom 1px solid rgba(50,50,50,0.3)
-        text-align right
-        float right
-        padding 0.25em 0
-        a
-            margin 0 0.5em
-            line-height 1.6em
-            color rgba(50,50,50,0.5)
-            padding-bottom 0
-            border-bottom 0
-
 +above(3)
     .nomobile
         display auto
+
     article h2
-        margin-top 0
+        margin-top 0.5em
         span
             h2()
             font-weight 300
-    
+            line-height 0
     header nav.main
         margin 0 auto
         text-align center
@@ -195,6 +195,14 @@ ul.news
             margin-top 0
     figure.wyd-logo img
         width 20em
++above(37rem)
+    article h2
+        text-align center
+        span
+            padding-left 0.5em
+    article section
+        width 35rem
+        margin 0 auto
 
 +above(4) // 600px
     header
@@ -203,17 +211,18 @@ ul.news
         float left
     header nav.main
         float: right
-        height 2.88em
+        height 3.15em
         margin 1.35em 0
         a
             padding-top 1.38em
             margin-right 1em
-    article
-        padding-top 0
+            margin-bottom 0
+    header nav.main, header h1
+        //margin-bottom 0.75rem
+        margin-bottom 1.5rem
     .container
         margin 0 auto
         width 45rem
     article h2
-        text-align center
-        span
-            padding-left 0.5em
+        margin-top 0
+        margin-bottom 1em
