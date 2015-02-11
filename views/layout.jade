@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+  head
+    != css(href='/')
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    - if (post.description) {
+    meta(name='description', content=post.description)
+    - } else {
+    meta(name='description', content='Information site for Piarist Youth coming to WYD 2016')
+    - }
+    meta(name='author', content= "Pijarzy")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    - if (post.title) {
+    title= post.title+" | Piarist WYD 2016"
+    - } else {
+    title "Piarist WYD 2016"
+    - }
+
+  body(class= "page-"+((_path.match(/^\/(\w+)\//) && _path.match(/^\/(\w+)\//)[1]) ? (_path.match(/^\/(\w+)\//) && _path.match(/^\/(\w+)\//)[1]) : _path.match(/(\w+)\.html$/)[1]))
+    header.lang.container
+        p.hidden Information site for Piarist Youth coming to WYD 2016
+        nav
+            a(href="#") EN
+            |  / 
+            a(href="#") PL
+            |  / 
+            a(href="#") ES
+    header.container
+        h1
+            span.wyd-red Calasanz 
+            span.wyd-blue WYD 
+            span.wyd-yellow 2016
+        nav.main
+            a(href="/index.html", class=(_path.match(/([\w\/]+)\.html$/)[1] == "/index") ? "current" : "") Home
+            //a(href="/news.html", class=(((_path.match(/^\/(\w+)\//) && _path.match(/^\/(\w+)\//)[1]) == "news") || _path.match(/(\w+)\.html$/)[1] == "news") ? "current" : "") News
+            a(href="/letter.html", class=(_path.match(/(\w+)\.html$/)[1] == "letter") ? "current" : "") Inviting Letter
+            a(href="/program.html", class=(((_path.match(/^\/(\w+)\//) && _path.match(/^\/(\w+)\//)[1]) == "program") || _path.match(/(\w+)\.html$/)[1] == "program") ? "current" : "") Our program
+            a(href="/wyd_info.html", class=(_path.match(/(\w+)\.html$/)[1] == "wyd_info") ? "current" : "") WYD Info
+            a(href="/contact.html", class=(_path.match(/(\w+)\.html$/)[1] == "contact") ? "current" : "") Contact us
+    article.container
+        block content
+    footer.container
+        p Piarists in Poland, <a href="mailto:wyd@scolopi.net">wyd@calasanz2016.com</a>
+
+    != js(href='/')

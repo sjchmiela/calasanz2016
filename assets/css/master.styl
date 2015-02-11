@@ -1,0 +1,219 @@
+@import '_settings'
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic')
+
+normalize-css()
+
+body
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+
+.container
+    padding: 0 1em;
+
+header h1
+    h2()
+    text-align: center;
+    font-weight: normal
+
+nav
+    fs: 0.9rem
+nav a
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 1em;
+    color: rgba(0,0,0,0.6);
+    border-bottom: 3px solid white;
+    padding-bottom: 2px;
+
+nav a.current
+    color: wyd-red;
+    border-bottom: 2px solid wyd-red;
+
+article.container
+    padding-top: 0.618em;
+
+article h2
+    h3()
+    line-height: 0;
+    border-bottom: 1px solid wyd-red;
+    margin-bottom: 1em;
+    font-weight: 300;
+    color: wyd-red;
+
+article h3
+    h4()
+    margin-bottom: 0.5em;
+
+p
+    paragraph()
+
+.page-letter nav a.current, 
+.page-letter article h2
+    color: wyd-green;
+    border-bottom-color: wyd-green  ;
+
+.page-wyd_info nav a.current,
+.page-wyd_info article h2
+    color: wyd-yellow;
+    border-bottom-color: wyd-yellow
+
+.page-contact nav a.current,
+.page-contact article h2
+	color: wyd-violet
+	border-bottom-color: wyd-violet
+
+.page-news nav a.current,
+.page-news article h2
+    color: wyd-orange
+    border-bottom-color: wyd-orange
+
+article h2 span
+    background: white;
+    padding: 0 0.5em 0 0;
+
+p, li, figcaption
+    color: #333;
+    line-height: 1.6em
+
+.wyd-red { color: wyd-red; }
+.wyd-blue { color: wyd-blue; }
+.wyd-yellow { color: wyd-yellow; }
+.emphasized { font-style: italic; }
+
+img
+	max-width: 100%
+
+figure.wyd-logo img
+	max-width 50%
+
+figure
+	text-align center
+	margin 0
+
+figcaption
+	text-align center
+	font-style italic
+	fs: 0.9rem
+
+article a
+    color wyd-blue
+    text-decoration none
+    border-bottom 1px solid #fff
+    border-bottom 1px solid rgba(255,255,255,0)
+    transition 0.15s all
+    &:hover
+        border-bottom 1px solid wyd-blue
+.news date
+    font-style italic
+    color rgb(100,100,100)
+    color rgba(100,100,100,1)
+
+footer p, footer a
+    color #888
+    padding-top 1em
+    fs: 0.75rem
+    text-align center
+    italic()
+    text-decoration none
+footer a:hover
+    border-bottom 1px solid #888
+
+iframe
+    width 100%
+
+.nomobile
+    display none
+
+.hidden
+    display none
+
+hr
+    border: 0;
+    height: 1px;
+    margin 2em 0
+    background: linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.3), rgba(0,0,0,0));
+
+ul.news
+    list-style none
+    padding-left 1em
+    li
+        border-bottom 1px solid wyd-orange
+        &:last-child
+            border-bottom none
+
+.lang
+    color rgba(50,50,50,0.5)
+    margin 0 1em
+    //box-shadow 0 0 1px rgba(50,50,50,0.3)
+    color rgba(50,50,50,0.5)
+    p
+        display none
+        margin 0
+        fs 0.9rem
+        italic()
+        padding 0.25em
+        color rgba(50,50,50,0.5)
+        padding-left 0
+        line-height 1.6em
+    nav
+        display inline-block
+        width 100%
+        border-bottom 1px solid rgba(50,50,50,0.3)
+        text-align right
+        float right
+        padding 0.25em 0
+        a
+            margin 0 0.5em
+            line-height 1.6em
+            color rgba(50,50,50,0.5)
+            padding-bottom 0
+            border-bottom 0
+
++above(3)
+    .nomobile
+        display auto
+    article h2
+        margin-top 0
+        span
+            h2()
+            font-weight 300
+    
+    header nav.main
+        margin 0 auto
+        text-align center
+        a
+            margin-right 1em
+    .media
+        media: 0
+        h3
+            margin-top 0
+            margin-bottom 0
+        > p
+            display block
+            float none !important
+            margin-top 0
+    figure.wyd-logo img
+        width 20em
+
++above(4) // 600px
+    header
+        overflow hidden
+    header h1
+        float left
+    header nav.main
+        float: right
+        height 2.88em
+        margin 1.35em 0
+        a
+            padding-top 1.38em
+            margin-right 1em
+    article
+        padding-top 0
+    .container
+        margin 0 auto
+        width 45rem
+    article h2
+        text-align center
+        span
+            padding-left 0.5em
