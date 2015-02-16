@@ -1,6 +1,9 @@
 doctype html
 html(lang="en")
   head
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+    <![endif]-->
     - if ( _path.match(/^\/(\w+)\//) ) { post.path_prefix = "../" } else { post.path_prefix = "" }
     != css(post.path_prefix)
     meta(charset='utf8')
