@@ -1,228 +1,280 @@
 @import '_settings'
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic')
 
+// http://www.modularscale.com/?16&px&1.618,1.236&web&text
+
 normalize-css()
 
+
+
 body
-    font-family: Lato, Helvetica, Arial, sans-serif;
-    font-size: 100%;
+  font-size 16px
+  font-family lato
+  color #333
+hr
+  border: 0;
+  height: 1px;
+  margin 1em 0
+  background: linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.3), rgba(0,0,0,0));
+a
+  reset-link()
+.italic
+  font-style italic
+.nav--lang
+  margin 0 1rem
+  padding 0.2rem 0
+  fs: 0.809rem
+  text-align right
+  line-height 1rem
+  color gray
+  border-bottom 1px solid lighten(gray, 10)
+  li
+    display inline-block
+  a
+    color gray
+    font-weight bold
+    padding 0 0.429rem
+    &.is-current
+      color black
+  li:last-child a
+    padding-right 0
 
-.container
-    padding: 0 1em;
+h1
+  fs 1.888rem
+  text-rendering optimizelegibility
+  line-height 1em
+  text-align center
+  font-weight normal
+  font-feature-settings "liga", "dlig"
+  margin 1.618rem 1rem
 
-header h1
-    h2()
-    text-align: center;
-    font-weight: normal
+.nav--main
+  margin 1rem 1rem
+  fs 0.809rem
+  ul
+    padding 0
+  li
+    display inline-block
+    a
+      font-weight bold
+      color dark-gray
+      margin 0 0.429rem
+      padding-bottom 2px
+      &.is-current
+        color wyd-red
+        border-bottom 2px solid wyd-red
+  li:first-child a
+    margin-left 0
+  li:last-child a
+    margin-right 0
 
-nav.main
-    fs: 0.9rem
-nav.main a
-    display: inline-block;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 1em;
-    color: rgba(0,0,0,0.6);
-    border-bottom: 2px solid white;
-    line-height 1.6em
-    margin-bottom 0.5em
+.content--main
+  margin 1.618rem 1rem
+  p, li
+    a
+      link(wyd-blue)
 
-.lang
-    color rgba(50,50,50,0.5)
-    overflow hidden
-    color rgba(50,50,50,0.5)
-    nav
-        display inline-block
-        width 100%
-        border-bottom 1px solid rgba(50,50,50,0.3)
-        text-align right
-        float right
-        fs: 0.9rem
-        padding 0.25em 0
-        a
-            font-weight bold
-            margin 0 0.5em
-            border-bottom: 2px solid white;
-            padding-bottom: 2px;
-            text-decoration none
-            color rgba(50,50,50,0.5)
-            line-height 1.6em
-            padding-bottom 0
-            border-bottom 2px solid white
-            &.current
-                color rgba(50,50,50,0.8)
+.footer--main
+  margin 1.618rem 1rem
+  p
+    text-align center
+    font-style italic
+    fs 0.809rem
+  p, a
+    color dark-gray
 
-nav.main a.current
-    color: wyd-red;
-    border-bottom: 2px solid wyd-red;
+h2
+  fs 1.528rem
+  font-weight 300
+  line-height 0
+  margin 0 auto
+  padding-top 0.794rem
+  color wyd-red
+  border-bottom 1px solid wyd-red
+  span
+    background white
+    padding-right 1rem
 
-article.container
-    padding-top: 0.618em;
-
-article h2
-    h3()
-    line-height: 0;
-    border-bottom: 1px solid wyd-red;
-    margin-bottom: 1em;
-    font-weight: 300;
-    color: wyd-red;
-
-article h3
-    h4()
-    margin-bottom: 0.5em;
+h3
+  fs: 1.236rem
+  font-weight bold
+  line-height 1.618em
+  margin 0 auto
+  padding-top 0.794rem
+  padding-bottom 0.794rem
 
 p
-    paragraph()
+  fs 1rem
+  margin 0.655rem 0
+h2+section
+  padding-top 0.794rem
+p, li
+  line-height 1.618rem
 
-.page-letter nav.main a.current, 
-.page-letter article h2
-    color: wyd-green;
-    border-bottom-color: wyd-green  ;
-
-.page-wyd_info nav.main a.current,
-.page-wyd_info article h2
-    color: wyd-yellow;
-    border-bottom-color: wyd-yellow
-
-.page-contact nav.main a.current,
-.page-contact article h2
-	color: wyd-violet
-	border-bottom-color: wyd-violet
-
-.page-program nav.main a.current,
-.page-program article h2
-    color: wyd-orange
-    border-bottom-color: wyd-orange
-
-article h2 span
-    background: white;
-    padding: 0 0.5em 0 0;
-
-p, li, figcaption
-    color: #333;
-    line-height: 1.6em
-
-.wyd-red { color: wyd-red; }
-.wyd-blue { color: wyd-blue; }
-.wyd-yellow { color: wyd-yellow; }
-.emphasized { font-style: italic; }
-
-img
-	max-width: 100%
-
-figure.wyd-logo img
-	max-width 50%
+.link--tile
+  display block
+  width 100%
+  padding-top 56.25%
+  overflow hidden
+  position relative
+  margin-bottom 1rem
+  .link--tile__image
+    height 100%
+    width 100%
+    min-height 100%
+    max-height 100%
+    display block
+    position absolute
+    left 0
+    top 0
+    overflow hidden
+    vertical-align middle
+    img
+      width 100%
+      height auto
+      display block
+      vertical-align middle
+  .link--tile__caption
+    display table
+    clear both
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    margin 0
+    color white
+    font-size 1.236rem
+    text-shadow: 1px 1px 2px #000;
+    width 100%
+    padding 1rem
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 35%,rgba(0,0,0,0.3) 100%)
+  &:hover .link--tile__caption
+    text-decoration underline
 
 figure
-	text-align center
-	margin 0
-
-figcaption
-	text-align center
-	font-style italic
-	fs: 0.9rem
-
-article a
-    color wyd-blue
-    text-decoration none
-    border-bottom 1px solid #fff
-    border-bottom 1px solid rgba(255,255,255,0)
-    transition 0.15s all
-    &:hover
-        border-bottom 1px solid wyd-blue
-.news date
+  margin 1.618rem 0 0.618rem
+  text-align center
+  figcaption
     font-style italic
-    color rgb(100,100,100)
-    color rgba(100,100,100,1)
+    margin-top 1rem
+  img
+    margin 0 auto
+
+.content--lyrics
+  overflow hidden
+  float left
+  width 47.5%
+  &+.content--lyrics
+    margin-left 5%
+  p
+    padding-left 1rem
+    text-indent -1rem
+
+.italic
+  italic()
+.strong
+  bold()
+.pull-right
+  float right
+.align-right
+  text-align right
+.wyd-red
+  color wyd-red
+.wyd-yellow
+  color wyd-yellow
+.wyd-blue
+  color wyd-blue
+
+iframe, img
+  max-width 100%
+
+.content--map
+  width 100%
+
+.page--contact
+  h2, .nav--main a.is-current
+    color wyd-violet
+    border-color wyd-violet
+.page--wyd_info
+  h2, .nav--main a.is-current
+    color wyd-blue
+    border-color wyd-blue
+.page--program
+  h2, .nav--main a.is-current
+    color wyd-yellow
+    border-color wyd-yellow
+
+.content--image__1_1
+  max-width 40%
+
++above(30rem)
+  .nav--sidebar
+    overflow hidden
+  .link--tile
+    width 47.5%
+    padding-top 26%
+    float left
+    &:nth-child(2n)
+      margin-left 5%
 
 
-footer p, footer a
-    color #888
-    padding-top 1em
-    fs: 0.75rem
-    text-align center
-    italic()
-    text-decoration none
-footer a:hover
-    border-bottom 1px solid #888
-
-iframe
-    width 100%
-
-.nomobile
-    display none
-
-.hidden
-    display none
-
-hr
-    border: 0;
-    height: 1px;
-    margin 2em 0
-    background: linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.3), rgba(0,0,0,0));
-
-ul.news
-    list-style none
-    padding-left 1em
-    li
-        border-bottom 1px solid wyd-orange
-        &:last-child
-            border-bottom none
-
-+above(3)
-    .nomobile
-        display auto
-
-    article h2
-        margin-top 0.5em
-        span
-            h2()
-            font-weight 300
-            line-height 0
-    header nav.main
-        margin 0 auto
-        text-align center
-        a
-            margin-right 1em
-    .media
-        media: 0
-        h3
-            margin-top 0
-            margin-bottom 0
-        > p
-            display block
-            float none !important
-            margin-top 0
-    figure.wyd-logo img
-        width 20em
 +above(37rem)
-    article h2
-        text-align center
-        span
-            padding-left 0.5em
-    article section
-        width 35rem
-        margin 0 auto
-
-+above(4) // 600px
-    header
-        overflow hidden
-    header h1
-        float left
-    header nav.main
-        float: right
-        height 3.15em
-        margin 1.35em 0
-        a
-            padding-top 1.38em
-            margin-right 1em
-            margin-bottom 0
-    header nav.main, header h1
-        //margin-bottom 0.75rem
-        margin-bottom 1.5rem
-    .container
-        margin 0 auto
-        width 45rem
-    article h2
+  .nav--lang, .content--main, .nav--main, .header--main
+    width 35rem
+    margin 0 auto
++above(53rem)
+  .nav--lang, .content--main, .header--main
+    width 51rem
+  h1
+    width auto
+    float left
+    margin-left 0
+    text-align left
+  h2
+    text-align center
+    margin-bottom 0.618rem
+    span
+      padding-left 1rem
+  .nav--main
+    margin-top 1.5rem
+    float right
+    width auto
+  .content--main
+    overflow hidden
+  .content--text
+    width 33rem
+    float left
+  .content--text-w-center
+    float none
+    margin 0 auto
+  .nav--sidebar
+    width 16rem
+    margin-left 2rem
+    margin-top 1.794rem
+    float left
+  .link--tile
+    width 100%
+    padding-top 56.25%
+    &:nth-child(2n)
+      margin-left 0
+  .media
+    media: 1rem
+    figure
+      margin-top 1rem
+    h3
         margin-top 0
-        margin-bottom 1.5em
+        margin-bottom 0
+    > p
+        display block
+        float none !important
+        margin-top 0
+
++above(59em)
+  .nav--lang, .content--main, .header--main
+    width 57rem
+  .content--text
+    width 35rem
+  .nav--sidebar
+    width 20rem
+  .content--map
+    height 25rem

@@ -23,3 +23,4 @@ module.exports =
 
   jade:
     pretty: true
+    basedir: __dirname
