@@ -5,8 +5,6 @@
 
 normalize-css()
 
-
-
 body
   font-size 16px
   font-family lato
@@ -15,11 +13,13 @@ hr
   border: 0;
   height: 1px;
   margin 1em 0
-  background: linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.3), rgba(0,0,0,0));
+  background: linear-gradient(left, white, #aaa, white);
 a
   reset-link()
 .italic
   font-style italic
+.straight
+  font-style normal
 .nav--lang
   margin 0 1rem
   padding 0.2rem 0
@@ -50,7 +50,7 @@ h1
 
 .nav--main
   margin 1rem 1rem
-  fs 0.809rem
+  fs 0.9rem
   ul
     padding 0
   li
@@ -70,7 +70,7 @@ h1
 
 .content--main
   margin 1.618rem 1rem
-  p, li
+  p, li, label, figcaption, address
     a
       link(wyd-blue)
 
@@ -101,14 +101,13 @@ h3
   line-height 1.618em
   margin 0 auto
   padding-top 0.794rem
-  padding-bottom 0.794rem
 
-p
+p, address
   fs 1rem
   margin 0.655rem 0
 h2+section
   padding-top 0.794rem
-p, li
+p, li, address
   line-height 1.618rem
 
 .link--tile
@@ -146,8 +145,9 @@ p, li
     font-size 1.236rem
     text-shadow: 1px 1px 2px #000;
     width 100%
-    padding 1rem
-    background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 35%,rgba(0,0,0,0.3) 100%)
+    padding 2rem 1rem 1rem
+    box-sizing border-box
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 75%,rgba(0,0,0,0.3) 100%)
   &:hover .link--tile__caption
     text-decoration underline
 
@@ -188,8 +188,37 @@ figure
 iframe, img
   max-width 100%
 
+form
+  margin-top 1rem
 .content--map
   width 100%
+
++html5-inputs()
+  input(wyd-blue, 100%)
+  font-family lato
+  transition none
+  box-sizing border-box
+
+label
+  label: block
+  text-transform uppercase
+  fs: 0.802rem
+  line-height 1.618rem
+  color #555
+
+input[type=submit]
+  button: green 'large'
+  font-family lato
+
+.actions
+  text-align right
+
+input[type="checkbox"]
+  margin-right 0.618rem
+  margin 0.618rem 0.618rem 0.618rem 0
+
+.field+.field, .field+.actions
+  margin-top 1rem
 
 .page--contact
   h2, .nav--main a.is-current
