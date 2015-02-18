@@ -1,0 +1,39 @@
+---
+title: "Organiser's subscription"
+---
+
+extends /layouts/pl
+
+block content
+  h2
+    span Organiser's subscription
+  section.content--text.content--text-w-center
+    figure
+      img(src="/img/exemplary_group.jpg")
+      figcaption Exemplary group with their organiser – Fr. Rafael Capo SchP (<a href="http://instagram.com/p/y8hm-jyoFm/">Source</a>)
+    p Are you a local group organiser? Will you come with a group of young people to Poland in 2016? Would you like to receive <strong>current information and announcements</strong> to your e-mailbox?
+    p Fill the form below, every time there is some information important for organisers – we will <strong>send it to you via e-mail</strong>.
+    p.italic Bonus: it will let us know how many people should we prepare for. ;)
+    form(action="/organiser_subscribe.php", method="post")
+      .field
+        label(for="form--name") What is your <strong>name</strong>?
+        input(type="text", name="name", id="form--name", placeholder="Father John Smith SP")
+      .field
+        label(for="form--email") What is your <strong>email address</strong>?
+        input(type="email", name="email", id="form--email", placeholder="smithschp@gmail.com")
+      .field
+        label(for="form--city") What <strong>city</strong> will you represent during WYD 2016?
+        input(type="text", name="city", id="form--city", placeholder="New York, USA")
+      .field
+        label(for="form--people") <strong>How many people</strong> will come with you to WYD (approximately)?
+        input(type="text", name="people", id="form--people", placeholder="50")
+      .field
+        label We would like to participate with all Calasanz Youth in:
+        label(for="form--days_in_diocese")
+          input(type="checkbox", name="days_in_diocese", id="form--days_in_diocese")
+          |Days in Diocese (July 20<sup>th</sup> to 25<sup>th</sup>)
+        label(for="form--calasantian_day")
+          input(type="checkbox", name="calasantian_day", id="form--calasantian_day")
+          |Calasantian Day in Cracow on July 27<sup>th</sup>.
+      .actions
+        input(type="submit", value="Register")

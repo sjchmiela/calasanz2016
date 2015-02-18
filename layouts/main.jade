@@ -1,4 +1,7 @@
 - loc = site.layouts[0]
+- each val in site.layouts
+    - if (_path.match(/^\/(\w+)\//)[1] == val.lang)
+        - loc = val
 - lang_path_prefix = "/"+loc.lang+"/"
 - body_class = ""
 - each val in _path.match(/\/\w+\/([\w\/]+)/)[1].split("/")
@@ -43,16 +46,16 @@ html(lang=loc.lang)
         nav.nav--main
             ul
                 li
-                    a(href=lang_path_prefix+loc._index+".html", class=(_path.match(/([\w]+)\.html$/)[1] == "index") ? "is-current" : "")=loc._Home
+                    a(href=lang_path_prefix+loc._index+".html", class=(_path.match(/([\w]+)\.html$/)[1] == loc._index) ? "is-current" : "")=loc._Home
                 | 
                 li
-                    a(href=lang_path_prefix+loc._program+".html", class=(((_path.match(/\/\w+\/(\w+)\//) && _path.match(/\/\w+\/(\w+)\//)[1] == "program") || _path.match(/(\w+)\.html$/)[1] == "program") ? "is-current" : ""))=loc._Our_Program
+                    a(href=lang_path_prefix+loc._program+".html", class=(((_path.match(/\/\w+\/(\w+)\//) && _path.match(/\/\w+\/(\w+)\//)[1] == loc._program) || _path.match(/(\w+)\.html$/)[1] == loc._program) ? "is-current" : ""))=loc._Our_Program
                 | 
                 li
-                    a(href=lang_path_prefix+loc._wyd_info+".html", class=(_path.match(/(\w+)\.html$/)[1] == "wyd_info") ? "is-current" : "")=loc._WYD_Info
+                    a(href=lang_path_prefix+loc._wyd_info+".html", class=(_path.match(/(\w+)\.html$/)[1] == loc._wyd_info) ? "is-current" : "")=loc._WYD_Info
                 | 
                 li
-                    a(href=lang_path_prefix+loc._contact+".html", class=(_path.match(/(\w+)\.html$/)[1] == "contact") ? "is-current" : "")=loc._Contact
+                    a(href=lang_path_prefix+loc._contact+".html", class=(_path.match(/(\w+)\.html$/)[1] == loc._contact) ? "is-current" : "")=loc._Contact
     article.content--main
         block content
     footer.footer--main
