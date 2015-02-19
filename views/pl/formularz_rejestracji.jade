@@ -18,16 +18,16 @@ block content
     form(action="/organiser_subscribe.php", method="post")
       .field
         label(for="form--name") Jak się <strong>nazywasz</strong>?
-        input(type="text", name="name", id="form--name", placeholder="Ojciec Jan Kowalski SP")
+        input(type="text", name="name", id="form--name", placeholder="Ojciec Jan Kowalski SP", required)
       .field
         label(for="form--email") Twój <strong>adres e-mail</strong>?
-        input(type="email", name="email", id="form--email", placeholder="kowalskisp@gmail.com")
+        input(type="email", name="email", id="form--emails", placeholder="kowalskisp@gmail.com", required)
       .field
         label(for="form--city") Jakie <strong>miasto</strong> będziesz reprezentował podczas ŚDM 2016?
-        input(type="text", name="city", id="form--city", placeholder="Lublin, Polska")
+        input(type="text", name="city", id="form--city", placeholder="Lublin, Polska", required)
       .field
         label(for="form--people") <strong>Z iloma ludźmi</strong> spodziewasz się przyjechać na ŚDM 2016 (orientacyjnie)?
-        input(type="text", name="people", id="form--people", placeholder="50")
+        input(type="text", name="people", id="form--people", placeholder="50", required)
       .field
         label W których wydarzeniach zamierzacie wziąć udział?
         label(for="form--days_in_diocese")
