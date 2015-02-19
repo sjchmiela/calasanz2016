@@ -9,6 +9,9 @@ body
   font-size 16px
   font-family lato
   color #333
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing 0.01rem
 hr
   border: 0;
   height: 1px;
@@ -324,3 +327,29 @@ input[type="checkbox"]
     width 20rem
   .content--map
     height 25rem
+
+
+@media print {
+  .nav--lang,  .nav--main, .footer--main {
+    visibility: hidden;
+  }
+  .content--main {
+    visibility: visible;
+  }
+  @page {
+    margin-top: .75in;
+    margin-bottom: .75in;
+  }
+  .content--main {
+    max-width: 4.95in;
+    margin: 0 auto;
+  }
+  body {
+    color: black;
+    orphans: 2;
+    widows: 2;
+  }
+  figure, img, a {
+    page-break-inside: avoid
+  }
+}
