@@ -1,6 +1,7 @@
 ---
 title: 'Info o ŚDM'
 description: "Symbolika loga – Czerwona linia w tle loga to obrys Polski, kraju w którym odbędzie się ten Światowy Dzień Młodzieży. Żółta kropka została umieszczona dokładnie nad Krakowem, miastem…"
+body_class: 'page--blue'
 ---
 
 extends /layouts/pl
@@ -8,63 +9,52 @@ extends /layouts/pl
 block content
   h2
     span Info o ŚDM
-  .media
-    figure.wyd-logo
-      img(src="/img/official-wyd-logo.png").content--image__1_1
-      figcaption Oficjalne logo Światowego Dnia Młodzieży 2016
-    h3 Symbolika loga
-    p Czerwona linia w tle loga to obrys Polski, kraju w którym odbędzie się ten Światowy Dzień Młodzieży. Żółta kropka została umieszczona dokładnie nad Krakowem, miastem, w którym odbędą się główne uroczystości. To kółko reprezentuje również młodzież. Krzyż symbolizuje Jezusa Chrystusa, a płomienie wyrastające z Krakowa oznaczają Miłosierdzie Boże. Można również zobaczyć trzy oficjalne kolory ŚDM 2016: <span class="wyd-red">czerwony</span>, <span class="wyd-blue">niebieski</span> oraz <span class="wyd-yellow">żółty</span>.
-  hr/
-  .content--text.content--text-w-center
-    h3 Oficjalny Hymn Światowego Dnia Młodzieży 2016
-    figure
-      <iframe width="560" height="315" src="http://www.youtube.com/embed/eZRsoPmeZXk?rel=0" frameborder="0" allowfullscreen></iframe>
-    .content--lyrics
-      h4 Polski
-      p Wznoszę swe oczy ku górom
-        br/
-        |skąd przyjdzie mi pomoc,
-        br/
-        |pomoc od Pana, wszak Bogiem On
-        br/
-        |Miłosiernym jest!
-      p Kiedy zbłądzimy Sam szuka nas,
-        br/
-        |by w swe ramiona wziąć,
-        br/
-        |rany uleczyć Krwią Swoich Ran,
-        br/
-        |nowe życie tchnąć!
-        br/
-        | 
-      p.strong Błogosławieni miłosierni,
-        br/
-        |Albowiem oni miłosierdzia dostąpią!
-      p Gdyby nam Pan nie odpuścił win,
-        br/
-        |Któż ostać by się mógł?
-        br/
-        |Lecz On przebacza, przeto i my
-        br/
-        |Czyńmy jak nasz Bóg!
-      p Pan Syna Krwią zmazał wszelki dług,
-        br/
-        |Syn z grobu żywy wstał,
-        br/
-        |„Panem jest Jezus!” – mówi w nas Duch,
-        br/
-        |niech to widzi świat!
-        br/
-        | 
-      p [PRZEJŚCIE]
-      p Więc odrzuć lęk i wiernym bądź,
-        br/
-        |swe troski w Panu złóż,
-        br/
-        |i ufaj, bo zmartwychwstał i wciąż
-        br/
-        |żyje Pan, Twój Bóg!
-
-    
+  br/
+  .tile--row
+    a.tile.tile--3-2(href="#")
+      .tile--image
+        img(src="/img/wyd_info_tile_1.png")
+      .tile--caption Idea Światowych Dni Młodzieży
+    a.tile.tile--2-2(href="#")
+      .tile--image
+        img(src="/img/wyd_info_tile_2.png")
+      .tile--caption Program ŚDM
+  .tile--row
+    a.tile.tile--1-1(href="#")
+      .tile--image
+        img(src="/img/wyd_info_tile_3.png")
+      .tile--caption Logo ŚDM
+    a.tile.tile--2-1(href="#")
+      .tile--image
+        img(src="/img/wyd_info_tile_4.jpg")
+      .tile--caption Poznaj Kraków
+    a.tile.tile--2-1(href="#")
+      .tile--image
+        img(src="/img/wyd_info_tile_5.jpg")
+      .tile--caption Symbole ŚDM
+  .tile--row.fs-0
+    .tile--column.tile--column--1
+      a.tile.tile--1-1(href="#")
+        .tile--image
+          img(src="/img/wyd_info_tile_6.jpg")
+        .tile--caption Orędzie Papieża Franciszka
+      a.tile.tile--1-1(href="#")
+        .tile--image
+          img(src="/img/wyd_info_tile_7.png")
+        .tile--caption Program L4
+    .tile--column.tile--column--2
+      a.tile.tile--2-2(href="#")
+        .tile--image
+          img(src="/img/wyd_info_tile_8.jpg")
+        .tile--caption Hymn ŚDM
+    .tile--column.tile--column--2
+      a.tile.tile--2-1(href="#")
+        .tile--image
+          img(src="/img/wyd_info_tile_9.jpg")
+        .tile--caption Modlitwa za ŚDM
+      a.tile.tile--2-1(href="#")
+        .tile--image
+          img(src="/img/wyd_info_tile_10.png")
+        .tile--caption Bilet dla Brata
     
     

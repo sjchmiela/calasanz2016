@@ -1,6 +1,7 @@
 ---
 title: "Nasz program"
 description: "Chcielibyśmy przeżyć ten Światowy Dzień Młodzieży w 2016 roku jako grupa Calasanz, skupiająca całą młodzież związaną z osobą św. Józefa Kalasancjusza, duszpasterstwami prowadzonymi przez pijarów i wspólnoty Rodziny Kalasantyńskiej na całym świecie."
+body_class: "page--yellow"
 ---
 
 extends /layouts/pl
@@ -9,15 +10,20 @@ block content
   h2
     span Nasz program
   section.content--text.content--text-w-center
-    p Chcielibyśmy przeżyć ten Światowy Dzień Młodzieży w 2016 roku jako <strong>grupa Calasanz</strong>, skupiająca całą młodzież związaną z osobą św. Józefa Kalasancjusza, duszpasterstwami prowadzonymi przez pijarów i wspólnoty Rodziny Kalasantyńskiej na całym świecie. Chcemy kontyniować tradycję spotkań młodzieży kalasantyńskiej, które miały miejsce w czasie poprzednich Światowych Dni Młodzieży w Madrycie i Rio de Janeiro.
+    p Chcielibyśmy przeżyć ten Światowy Dzień Młodzieży w 2016 roku jako <strong>grupa Calasanz</strong>, skupiająca całą młodzież związaną z osobą św. Józefa Kalasancjusza, duszpasterstwami prowadzonymi przez pijarów i wspólnoty Rodziny Kalasantyńskiej na całym świecie. 
     p Dlatego przygotowujemy <strong>specjalny program podczas ŚDM 2016 w Polsce</strong>, na który już teraz zapraszamy. Nasza propozycja składa się z dwóch etapów:
-    ul
-      li 20 – 25 lipca 2016 roku — 
-        a(href=loc._program+"/"+loc._days_in_diocese_in_bolszewo+".html")
-          strong Dni w Diecezji
-          |  w Bolszewie
-        |  (Archidiecezja Gdańska)
-      li 27 lipca 2016 roku — 
-        a(href=loc._program+"/"+loc._calasantian_day_in_cracow+".html")
-          strong Dzień Kalasantyński
-          |  w Krakowie
+    br/
+    .content--lyrics
+      a.link--tile(href=loc._program+"/"+loc._days_in_diocese_in_bolszewo+".html")
+        .link--tile__image
+          img(src="/img/days_in_diocese_thumb.jpg")
+        .link--tile__caption Dni w Diecezji
+          br/
+          | (20–25 lipca 2016 r.)
+    .content--lyrics
+      a.link--tile(href=loc._program+"/"+loc._calasantian_day_in_cracow+".html")
+        .link--tile__image
+          img(src="/img/calasantian_day_thumb.jpg")
+        .link--tile__caption Dzień Kalasantyński
+          br/
+          | (27 lipca 2016 r.)

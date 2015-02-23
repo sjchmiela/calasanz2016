@@ -17,6 +17,7 @@ hr
   height: 1px;
   margin 1em 0
   background: linear-gradient(left, white, #aaa, white);
+  width 100%
 a
   reset-link()
 .italic
@@ -94,6 +95,7 @@ h1
       link(wyd-blue)
 
 .footer--main
+  clear both
   margin 1.618rem 1rem
   p
     text-align center
@@ -128,6 +130,62 @@ h2+section
   padding-top 0.794rem
 p, li, address
   line-height 1.618rem
+
+.tile--row
+  width 100%
+  clear both
+  margin-top 1em
+  display block
+  margin-bottom 1em
+.tile--row.tile--row
+    margin 0
+.tile
+  display block
+  overflow hidden
+  position relative
+  margin-bottom 1rem
+.tile--3-2
+  padding-top 65.74%
+.tile--1-1
+  padding-top 100%
+.tile--2-2
+  padding-top 100%
+.tile--2-1
+  padding-top 47.82%
+.tile--image
+  height 100%
+  width 100%
+  min-height 100%
+  max-height 100%
+  display block
+  position absolute
+  top 0
+  left 0
+  overflow hidden
+  vertical-align middle
+  img
+    width 100%
+    height auto
+    display block
+    vertical-align middle
+.tile--caption
+  display table
+  clear both
+  position absolute
+  bottom 0
+  left 0
+  right 0
+  margin 0
+  color white
+  font-size 1.236rem
+  text-shadow: 1px 1px 2px #000;
+  width 100%
+  padding 2rem 1rem 1rem
+  box-sizing border-box
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 75%,rgba(0,0,0,0.3) 100%)
+.tile:hover .tile--caption
+    text-decoration underline
+
 
 .link--tile
   display block
@@ -166,7 +224,9 @@ p, li, address
     width 100%
     padding 2rem 1rem 1rem
     box-sizing border-box
-    background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 75%,rgba(0,0,0,0.3) 100%)
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 50%,rgba(0,0,0,0.3) 100%)
+  .link--tile__caption.no-shadow
+    background: white
   &:hover .link--tile__caption
     text-decoration underline
 
@@ -240,15 +300,15 @@ input[type="checkbox"]
 .field+.field, .field+.actions
   margin-top 1rem
 
-.page--contact
+.page--violet
   h2, .nav--main a.is-current
     color wyd-violet
     border-color wyd-violet
-.page--wyd_info
+.page--blue
   h2, .nav--main a.is-current
     color wyd-blue
     border-color wyd-blue
-.page--program
+.page--yellow
   h2, .nav--main a.is-current
     color wyd-yellow
     border-color wyd-yellow
@@ -259,13 +319,20 @@ input[type="checkbox"]
 +above(30rem)
   .nav--sidebar
     overflow hidden
-  .link--tile
+    .link--tile
+      width 47.5%
+      padding-top 26%
+      float left
+      &:nth-child(2n)
+        margin-left 5%
+  .tile--3-2
+    padding-top 65.74%
+  .tile--1-1, .tile--2-2
     width 47.5%
-    padding-top 26%
-    float left
-    &:nth-child(2n)
-      margin-left 5%
-
+    padding-top 47.5%
+    display inline-block
+  .tile--2-1
+    padding-top 47.82%
 
 +above(37rem)
   .nav--lang, .content--main, .nav--main, .header--main
@@ -301,11 +368,11 @@ input[type="checkbox"]
     margin-left 2rem
     margin-top 1.794rem
     float left
-  .link--tile
-    width 100%
-    padding-top 56.25%
-    &:nth-child(2n)
-      margin-left 0
+    .link--tile
+      width 100%
+      padding-top 56.25%
+      &:nth-child(2n)
+        margin-left 0
   .media
     media: 1rem
     figure
@@ -317,6 +384,38 @@ input[type="checkbox"]
         display block
         float none !important
         margin-top 0
+  .tile
+    display inline-block
+    margin-right 1em
+  .tile:last-child
+    margin-right 0
+  .tile--3-2
+    width 30.2em
+    padding-top 19.8em
+  .tile--2-2
+    width 19.8em
+    padding-top 19.8em
+  .tile--2-1
+    width 19.8em
+    padding-top 9.4em
+  .tile--1-1
+    width 9.4em
+    padding-top 9.4em
+  .fs-0
+    fs: 0
+  .tile--column
+    display inline-block
+    margin-right 1em
+    fs: 1rem
+  .tile--column:last-child
+    margin-right 0
+  .tile--column .tile
+    display block
+    margin-right 0
+  .tile--column--1
+    width 9.4em
+  .tile--column--2
+    width 19.8em
 
 +above(59em)
   .nav--lang, .content--main, .header--main
@@ -326,7 +425,23 @@ input[type="checkbox"]
   .nav--sidebar
     width 20rem
   .content--map
-    height 25rem
+    height 20rem
+  .tile--3-2
+    width 33.8em
+    padding-top 22.2em
+  .tile--2-2
+    width 22.2em
+    padding-top 22.2em
+  .tile--2-1
+    width 22.2em
+    padding-top 10.6em
+  .tile--1-1
+    width 10.6em
+    padding-top 10.6em
+  .tile--column--1
+    width 10.6em
+  .tile--column--2
+    width 22.2em
 
 
 @media print {

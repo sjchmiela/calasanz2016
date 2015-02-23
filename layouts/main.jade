@@ -3,9 +3,6 @@
     - if (_path.match(/^\/(\w+)\//)[1] == val.lang)
         - loc = val
 - lang_path_prefix = "/"+loc.lang+"/"
-- body_class = ""
-- each val in _path.match(/\/\w+\/([\w\/]+)/)[1].split("/")
-    - body_class = body_class+"page--"+val+" "
 doctype html
 html(lang=loc.lang)
   head
@@ -28,7 +25,7 @@ html(lang=loc.lang)
     title= loc.main_title
     - }
 
-  body(class=body_class)
+  body(class=post.body_class)
     ul.nav--lang
         li
             a(href="/en/", class=(loc.lang == "en" ? "is-current" : "")) English
@@ -49,7 +46,10 @@ html(lang=loc.lang)
                     a(href=lang_path_prefix+loc._index+".html", class=(_path.match(/([\w]+)\.html$/)[1] == loc._index) ? "is-current" : "")=loc._Home
                 | 
                 li
-                    a(href=lang_path_prefix+loc._program+".html", class=(((_path.match(/\/\w+\/(\w+)\//) && _path.match(/\/\w+\/(\w+)\//)[1] == loc._program) || _path.match(/(\w+)\.html$/)[1] == loc._program) ? "is-current" : ""))=loc._Our_Program
+                    a(href=lang_path_prefix+loc._days_in_diocese_in_bolszewo+".html", class=(_path.match(/(\w+)\.html$/)[1] == loc._days_in_diocese_in_bolszewo) ? "is-current" : "")=loc._In_Diocese
+                | 
+                li
+                    a(href=lang_path_prefix+loc._calasantian_day_in_cracow+".html", class=(_path.match(/(\w+)\.html$/)[1] == loc._calasantian_day_in_cracow) ? "is-current" : "")=loc._In_Cracow
                 | 
                 li
                     a(href=lang_path_prefix+loc._wyd_info+".html", class=(_path.match(/(\w+)\.html$/)[1] == loc._wyd_info) ? "is-current" : "")=loc._WYD_Info
