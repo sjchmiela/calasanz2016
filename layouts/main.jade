@@ -24,7 +24,8 @@ html(lang=loc.lang)
     - } else {
     title= loc.main_title
     - }
-
+    script(type="text/javascript", src="/js/wh-cookies-"+loc.lang+".js")
+    script(type="text/javascript", src="/js/wh-cookies.js")
   body(class=post.body_class)
     ul.nav--lang
         li
@@ -60,5 +61,3 @@ html(lang=loc.lang)
         block content
     footer.footer--main
         p!=loc._Piarists_in_Poland+', <a href="mailto:'+loc.contact_mail+'">'+loc.contact_mail+'</a>'
-    script(type="text/javascript", src="/js/wh-cookies-"+loc.lang+".js")
-    script(type="text/javascript", src="/js/wh-cookies.js")

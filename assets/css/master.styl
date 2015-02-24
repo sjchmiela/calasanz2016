@@ -1,17 +1,21 @@
 @import '_settings'
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin-ext,latin);
+//@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin-ext,latin);
+@import url(/css/nivo-lightbox.css);
+@import url(/css/default.css);
 
 // http://www.modularscale.com/?16&px&1.618,1.236&web&text
 
 normalize-css()
 
 body
-  font-size 16px
+  font-size 100%
   font-family lato
   color #333
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing 0.01rem
+  padding 0
+  margin 0
 hr
   border: 0;
   height: 1px;
@@ -91,6 +95,7 @@ h1
 .content--main
   margin 1.618rem 1rem
   clear: both;
+.content--main, .tile--content
   p, li, label, figcaption, address
     a
       link(wyd-blue)
@@ -127,9 +132,12 @@ h3
 p, address
   fs 1rem
   margin 0.655rem 0
+blockquote
+  fs 1rem
+  margin 0.655rem 2.618rem
 h2+section
   padding-top 0.794rem
-p, li, address
+p, li, address, blockquote
   line-height 1.618rem
 
 .tile--row
@@ -189,6 +197,11 @@ p, li, address
 .tile:hover .tile--caption
     text-decoration underline
 
+.tile--content
+  float none
+  display block
+.js-hide .tile--content
+  margin-top 1.618em
 
 .link--tile
   display block
@@ -409,7 +422,7 @@ input[type="checkbox"]
     fs: 0
   .tile--column
     display inline-block
-    margin-right 1em
+    margin-right 0.99em
     fs: 1rem
   .tile--column:last-child
     margin-right 0
