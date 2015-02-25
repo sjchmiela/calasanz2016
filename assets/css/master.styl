@@ -82,7 +82,8 @@ h1
     a
       font-weight bold
       color dark-gray
-      margin 0 0.429rem
+      margin 0
+      margin-right 0.858rem
       padding-bottom 2px
       &.is-current
         color wyd-red
@@ -185,7 +186,8 @@ p, li, address, blockquote
   margin 0
   color white
   font-size 1.236rem
-  text-shadow: 1px 1px 2px #000;
+  text-shadow: 0 0 0.25em #000;
+  text-shadow: 0 0 0.25em rgba(0,0,0,0.9);
   width 100%
   padding 2rem 1rem 1rem
   box-sizing border-box
@@ -197,17 +199,26 @@ p, li, address, blockquote
   .tile--caption
     fs: 1.618rem
     font-weight 700
-.tile--1-1
-  padding-top 100%
-  .tile--caption
-    fs: 1rem
+.tile--1-1 .tile--caption
+  fs: 1rem
 .tile--2-2
   padding-top 100%
   .tile--caption
     font-weight 700
 .tile--2-1
   padding-top 47.82%
-
+.tile--3-2
+  padding-top 65.74%
+.tile--1-1, .tile--2-2
+  width 47.5%
+  padding-top 47.5%
+  display inline-block
+  margin-right 5%
+.tile--2-2.tile--mobile-ending
+  width 100%
+  padding-top 100%
+.tile--mobile-ending
+  margin-right 0
 .tile--content
   float none
   display block
@@ -343,21 +354,6 @@ input[type="checkbox"]
 .content--image__1_1
   max-width 40%
 
-.tile--3-2
-    padding-top 65.74%
-.tile--1-1, .tile--2-2
-  width 47.5%
-  padding-top 47.5%
-  display inline-block
-  margin-right 5%
-.tile--2-2.tile--mobile-ending
-  width 100%
-  padding-top 100%
-.tile--2-1
-  padding-top 47.82%
-.tile--mobile-ending
-  margin-right 0
-
 +above(30rem)
   .nav--sidebar
     overflow hidden
@@ -372,6 +368,83 @@ input[type="checkbox"]
   .nav--lang, .content--main, .nav--main, .header--main
     width 35rem
     margin 0 auto
+  .nav--main
+    text-align center
+  h2
+    text-align center
+    margin-bottom 0.618rem
+    span
+      padding-left 1rem
+  .content--main
+    overflow hidden
+  .content--text
+    width 33rem
+    float none
+    margin 0 auto
+  .nivo-lightbox-wrap
+    left 7%
+    right 7%
+  .nivo-lightbox-content .content--text
+    width 29rem
+  .content--text-w-center
+    float none
+    margin 0 auto
+  .tile
+    display inline-block
+    margin-right 1em
+  .tile:last-child
+    margin-right 0
+  .tile--3-2
+    width 20.6rem
+    padding-top 13.4rem
+  .tile--2-2, .tile--2-2.tile--mobile-ending
+    width 13.4rem
+    padding-top 13.4rem
+  .tile--2-1
+    width 13.4rem
+    padding-top 6.2rem
+  .tile--1-1
+    width 6.2rem
+    padding-top 6.2rem
+  .fs-0
+    fs: 0
+  .tile--column
+    display inline-block
+    margin-right 0.99em
+    fs: 1rem
+  .tile--column:last-child
+    margin-right 0
+  .tile--column .tile
+    display block
+    margin-right 0
+  .tile--column--1
+    width 6.2rem
+  .tile--column--2
+    width 13.4em
+  .tile--wide-ending
+    clear right
+    margin-right 0
++above(41rem)
+  .nav--lang, .content--main, .nav--main, .header--main
+    width 39rem
+    margin 0 auto
+  .tile--3-2
+    width 23rem
+    padding-top 15rem
+  .tile--2-2, .tile--2-2.tile--mobile-ending
+    width 15rem
+    padding-top 15rem
+  .tile--2-1
+    width 15rem
+    padding-top 7rem
+  .tile--1-1
+    width 7rem
+    padding-top 7rem
+  .tile--column--1
+    width 7rem
+  .tile--column--2
+    width 15rem
+
 +above(53rem)
   .nav--lang, .content--main, .header--main
     width 51rem
@@ -381,23 +454,12 @@ input[type="checkbox"]
     float left
     margin-left 0
     text-align left
-  h2
-    text-align center
-    margin-bottom 0.618rem
-    span
-      padding-left 1rem
   .nav--main
     margin-top 1.5rem
     float right
     width auto
-  .content--main
-    overflow hidden
   .content--text
-    width 33rem
-    float left
-  .content--text-w-center
     float none
-    margin 0 auto
   .nav--sidebar
     width 16rem
     margin-left 2rem
@@ -427,7 +489,7 @@ input[type="checkbox"]
   .tile--3-2
     width 30.2em
     padding-top 19.8em
-  .tile--2-2
+  .tile--2-2, .tile--2-2.tile--mobile-ending
     width 19.8em
     padding-top 19.8em
   .tile--2-1
@@ -456,9 +518,12 @@ input[type="checkbox"]
     margin-right 0
 
 +above(59em)
+  .nivo-lightbox-wrap
+    left 10%
+    right 10%
   .nav--lang, .content--main, .header--main
     width 57rem
-  .content--text
+  .content--text, .nivo-lightbox-content .content--text
     width 35rem
   .nav--sidebar
     width 20rem
@@ -467,7 +532,7 @@ input[type="checkbox"]
   .tile--3-2
     width 33.8em
     padding-top 22.2em
-  .tile--2-2
+  .tile--2-2, .tile--2-2.tile--mobile-ending
     width 22.2em
     padding-top 22.2em
   .tile--2-1
