@@ -1,0 +1,39 @@
+---
+title: "Dni w Diecezji"
+description: "Dni w Diecezji podczas Światowego Dnia Młodzieży 2016 to czas, podczas którego młodzi ludzie z całego świata są goszczeni w Polskich diecezjach. Chcielibyśmy zaprosić kalasantyńską młodzież do spędzenia Dni w Diecezjach w pijarskiej Parafii w Bolszewie."
+body_class: 'page--yellow'
+---
+
+extends /layouts/pl
+
+block content
+  h2
+    span Dni w Diecezji
+  br/
+  a.tile.tile--3-2.tile--mobile-ending(href="#tile_1", data-lightbox-type="inline")
+    .tile--image
+      img(src="/img/in_diocese_tile_1@2x.jpg")
+    .tile--caption Calasanz 2016 w Diecezji
+  a.tile.tile--2-2.tile--wide-ending(href="#tile_2", data-lightbox-type="inline")
+    .tile--image
+      img(src="/img/in_diocese_tile_2@2x.jpg")
+    .tile--caption Program Dni w Diecezji
+  a.tile.tile--1-1.tile--mobile-ending(href="#tile_3", data-lightbox-type="inline")
+    .tile--image
+      img(src="/img/in_diocese_tile_3@2x.jpg")
+    .tile--caption Jak dojechać?
+  a.tile.tile--2-1.tile--mobile-ending(href="#tile_4", data-lightbox-type="inline")
+    .tile--image
+      img(src="/img/in_diocese_tile_4@2x.jpg")
+    .tile--caption Poznaj region
+  a.tile.tile--2-1.tile--wide-ending(href="#tile_5", data-lightbox-type="inline")
+    .tile--image
+      img(src="/img/in_diocese_tile_5@2x.jpg")
+    .tile--caption Idea Dni w Diecezji
+  script(type="text/javascript", src="/js/jquery.min.js")
+  script(type="text/javascript", src="/js/nivo-lightbox.min.js")
+  script.
+    $(document).ready(function(){
+        $('a.tile').nivoLightbox();
+        $('.js-hide').css('display', 'none');
+    });
