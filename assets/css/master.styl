@@ -343,6 +343,21 @@ input[type="checkbox"]
 .content--image__1_1
   max-width 40%
 
+.tile--3-2
+    padding-top 65.74%
+.tile--1-1, .tile--2-2
+  width 47.5%
+  padding-top 47.5%
+  display inline-block
+  margin-right 5%
+.tile--2-2.tile--mobile-ending
+  width 100%
+  padding-top 100%
+.tile--2-1
+  padding-top 47.82%
+.tile--mobile-ending
+  margin-right 0
+
 +above(30rem)
   .nav--sidebar
     overflow hidden
@@ -352,14 +367,6 @@ input[type="checkbox"]
       float left
       &:nth-child(2n)
         margin-left 5%
-  .tile--3-2
-    padding-top 65.74%
-  .tile--1-1, .tile--2-2
-    width 47.5%
-    padding-top 47.5%
-    display inline-block
-  .tile--2-1
-    padding-top 47.82%
 
 +above(37rem)
   .nav--lang, .content--main, .nav--main, .header--main
@@ -444,6 +451,9 @@ input[type="checkbox"]
     width 9.4em
   .tile--column--2
     width 19.8em
+  .tile--wide-ending
+    clear right
+    margin-right 0
 
 +above(59em)
   .nav--lang, .content--main, .header--main
