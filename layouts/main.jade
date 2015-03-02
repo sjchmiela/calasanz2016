@@ -38,9 +38,10 @@ html(lang=loc.lang)
             a(href="/es/", class=(loc.lang == "es" ? "is-current" : "")) Español
     header.header--main
         h1
-            span.wyd-red=loc.main_title_1 
-            span.wyd-blue=loc.main_title_2
-            span.wyd-yellow=loc.main_title_3
+            a(href="/"+loc.lang+"/")
+                span.wyd-red=loc.main_title_1 
+                span.wyd-blue=loc.main_title_2
+                span.wyd-yellow=loc.main_title_3
         nav.nav--main
             ul
                 li
