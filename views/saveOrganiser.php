@@ -2,7 +2,16 @@
 
   require("config.php");
 
-  $dbh = getConnection();
+  $dsn = "mysql:dbname=".$baza.";host=".$host.";port=".$port.";charset=UTF8";
+  $dbh = null;
+  try {
+    $dbh = new PDO($dsn, $login, $haslo, array(PDO::ATTR_PERSISTENT => false));
+  } catch (PDOException $e) {
+    echo 'ERROR: ' . $e->getMessage();
+    die();
+    $error = true;
+    
+    }
 
   $name = $_POST["name"];
   $email = $_POST["email"];
