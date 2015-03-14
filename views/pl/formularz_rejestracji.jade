@@ -10,12 +10,13 @@ block content
     span Subskrypcja organizatorów
   section.content--text.content--text-w-center
     figure
-      img(src="/img/exemplary_group.jpg")
+      div(style="width: 100%;padding-top:76.60%;position:relative")
+        img(src="/img/exemplary_group.jpg", alt="Exemplary Group Photo", style="position:absolute;top:0;left:0", data-no-retina="true")
       figcaption Przykładowa grupa z ich organizatorem – o. Rafaelem Capo SchP (<a href="http://instagram.com/p/y8hm-jyoFm/">Źródło</a>)
     p Jesteś organizatorem lokalnej kalasantyńskiej grupy? Przybędziesz z grupą młodych ludzi do Polski w 2016 roku? Chciałbyś otrzymywać <strong>aktualne informacje i ogłoszenia</strong> do swojej skrzynki mailowej?
     p Wypełnij poniższy formularz, za każdym razem gdy pojawią się jakieś informacje ważne dla organizatorów – <strong>wyślemy te informacje na maila</strong>.
     p.italic Dodatkowo będziemy wiedzieć ilu ludzi się spodziewać i na ile przygotowywać. ;)
-    form(action="http://www.maturzysci.pijarzy.pl/calasanz2016/organizator_zapisz.php", method="post")
+    form(action=loc._organiser_subscribe+".php", method="post")
       .field
         label(for="form--name") Jak się <strong>nazywasz</strong>?
         input(type="text", name="name", id="form--name", placeholder="Ojciec Jan Kowalski SP", required)

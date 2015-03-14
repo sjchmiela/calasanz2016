@@ -10,12 +10,13 @@ block content
     span Organiser's subscription
   section.content--text.content--text-w-center
     figure
-      img(src="/img/exemplary_group.jpg")
+      div(style="width: 100%;padding-top:76.60%;position:relative")
+        img(src="/img/exemplary_group.jpg", alt="Exemplary Group Photo", style="position:absolute;top:0;left:0", data-no-retina="true")
       figcaption Exemplary group with their organiser – Fr. Rafael Capo SchP (<a href="http://instagram.com/p/y8hm-jyoFm/">Source</a>)
     p Are you a local group organiser? Will you come with a group of young people to Poland in 2016? Would you like to receive <strong>current information and announcements</strong> to your e-mailbox?
     p Fill the form below, every time there is some information important for organisers – we will <strong>send it to you via e-mail</strong>.
     p.italic Bonus: it will let us know how many people should we prepare for. ;)
-    form(action="http://www.maturzysci.pijarzy.pl/calasanz2016/organiser_subscribe.php", method="post")
+    form(action=loc._organiser_subscribe+".php", method="post")
       .field
         label(for="form--name") What is your <strong>name</strong>?
         input(type="text", name="name", id="form--name", placeholder="Father John Doe SP", required)
