@@ -2,3 +2,4 @@
 node_modules
 public
 ship.conf
+views/config.php
