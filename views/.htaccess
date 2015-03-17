@@ -16,8 +16,13 @@ RewriteRule ^(.*)$ http://calasanz2016.com/$1 [L,R=301]
 
 RewriteCond %{HTTP:Accept-Language} ^pl [NC]
 RewriteRule ^$ /pl/ [L,R=301]
+RewriteCond %{HTTP:Accept-Language} ^pl [NC]
+RewriteRule ^\/$ /pl/ [L,R=301]
 
 RewriteCond %{HTTP:Accept-Language} ^es [NC]
 RewriteRule ^$ /es/ [L,R=301]
+RewriteCond %{HTTP:Accept-Language} ^es [NC]
+RewriteRule ^\/$ /es/ [L,R=301]
 
 RewriteRule ^$ /en/ [L,R=301]
+RewriteRule ^\/$ /en/ [L,R=301]
