@@ -1,16 +1,72 @@
 ---
-title: "Bienvenido"
-body_class: "es"
+title: "Página de inicio"
 ---
 
 extends /layouts/es
 
 block content
   h2
-    span Lo sentimos!
-  section.content--text.content--text-w-center
-    p Lo siento pero la página web no está traducida. Nuestros traductoros están aplicado para traducirla. Queremos daros el mejor texto. La traducción completa va a estar pronto.
-    p Hasta ese día le invitamos a utilizar <a href="/en/">la página Inglés</a>.
-    h3 Himno de la JMJ en español
-      p 
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/Wr0_x6mc0d8?rel=0" frameborder="0" allowfullscreen></iframe>
+    span Bienvenidos
+  section.content--text
+    h3 Queridos hermanos, queridos jóvenes
+    p Como bien sabéis se acerca la JMJ. Se acerca muy pronto. La esperamos con mucha emoción. Hemos preparado un breve resumen de nuestros planes.
+    p 
+      img(src="/img/piarist_logo.png", style="float: left; max-width: 10em; margin-right: 1em")
+      | Nos gustaría vivir la JMJ Cracovia 2016 como <strong>grupo Calasanz</strong> que reúne a todos los jóvenes y grupos de pastoral comprometidos  con San José Calasanz organizados por los escolapios y las comunidades de la Familia Calasancia de todo el mundo. Nuestro deseo es dar continuidad a los encuentros de la juventud calasancia. Los anteriores encuentros tuvieron lugar durante las Jornadas Mundiales de la Juventud en Madrid y en Rio de Janeiro.
+    //figure
+    //  img(src="/img/rio5.jpg")
+    //  figcaption Spotkanie kalasantyńskie w Rio de Janeiro
+    h3 Programa
+    p Hemos elaborado <strong>un programa especial para la JMJ 2016</strong>, al cual le invitamos a ser partícipes. Nuestra propuesta abarca dos etapas:
+    ul
+      li Del 20 al 25 de julio de 2016 — 
+        a(href=loc._days_in_diocese_in_bolszewo+".html")
+          strong Días en las Diócesis
+          |  en Bolszewo
+        |  (Arquidiócesis de Gdansk)
+      li 27 de julio de 2016 — 
+        a(href=loc._calasantian_day_in_cracow+".html")
+          strong Día Calasancio
+          |  en Cracovia
+    p <strong>Los Días en las Diócesis</strong> que durarán 5 días, es un tiempo en el que los jóvenes estarán hospedados en las diócesis a lo largo del país. Visitaremos la diócesis de la ciudad de Gdansk, situada al norte de Polonia, cerca del mar. Es una magnífica oportunidad de conocer la cultura y la espiritualidad polaca y gente muy amable. Al participar en este evento formaréis parte de  la juventud calasancia de Polonia que ya conocéis un poco. Además, tendréis la oportunidad de conocer gente de todo el mundo comprometida con San José Calananz.  
+      a(href=loc._days_in_diocese_in_bolszewo+".html") Más información…
+    p <strong>El Día Calasancio en Cracovia</strong> es el único encuentro escolapio, durante los actos centrales, en Cracovia. Este día, durante varias horas, presenciaremos las actuaciones de las bandas escolapias de todo el mundo, comeremos juntos, nos conoceremos mejor y lo pasaremos estupendamente. 
+      a(href=loc._calasantian_day_in_cracow+".html") Más información…
+    p 
+      img(src="/img/index-wyd-logo.png", style="float: right; margin-left: 1em; width: 10em")
+      | Hace más de un año se difundió la página web oficial de la JMJ Cracovia 2016 en diferentes idiomas – 
+      a(href="http://www.sdm.krakow.pl/"+loc.lang+"/") http://www.sdm.krakow.pl/
+      |. Además, nosotros publicaremos toda información relacionada al evento: fotos, videos e invitaciones a través de las redes sociales. 
+      a(href=loc._contact+".html") Haz click aquí para verlas todas.
+    h3 Más información acerca de la organización
+    //|  de los Días en las Diócesis
+    p Nos encargaremos de organizar el alojamiento durante los Días en la Diócesis en Bolszewo y sus alrededores. En cambio, en Cracovia estarán a cargo los organizadores de la JMJ. Ni los colegios escolapios ni las parroquias de los Escolapios se encargarán de organizar el alojamiento de los participantes de la JMJ. El transporte aéreo queda bajo a cargo de cada peregrino. La información sobre los medios de transporte durante los Días en la Diócesis en Bolszewo, hacia Cracovia y dentro de Cracovia, la publicaremos en nuestra página web a medida que nos informen los organizadores. Lo mismo se refiere a la información acerca del costo de la participación en la JMJ.
+    p Un saludo cordial. Contamos con vuestra presencia. ¡Nos veremos durante la JMJ Cracovia 2016!
+    p.italic.align-right P. Tomasz Abramowicz SP
+      br/ 
+      | El Comité Organizador de la JMJ Cracovia 2016 – CALASANZ2016
+  nav.nav--sidebar
+    a.link--tile(href=loc._days_in_diocese_in_bolszewo+".html")
+      .link--tile__image
+        img(src="/img/days_in_diocese_thumb.jpg", data-no-retina="true")
+      .link--tile__caption En la diócesis
+    | 
+    a.link--tile(href=loc._calasantian_day_in_cracow+".html")
+      .link--tile__image
+        img(src="/img/calasantian_day_thumb.jpg", data-no-retina="true")
+      .link--tile__caption En Cracovia
+    | 
+    a.link--tile(href=loc._organisers_form+".html")
+      .link--tile__image
+        img(src="/img/coming_group_thumb.jpg", data-no-retina="true")
+      .link--tile__caption ¿Eres organizador de la llegada de un grupo de peregrinos que participará en la JMJ? ¡Infórmanos al respecto!
+    | 
+    a.link--tile(href="https://www.facebook.com/pages/World-Youth-Day-2016-Calasanz/1563386310596737")
+      .link--tile__image
+        img(src="/img/facebook_thumb.png", data-no-retina="true")
+      .link--tile__caption Página de Facebook
+    | 
+    a.link--tile(href="https://www.youtube.com/channel/UC0sZy2upruPPYfRGX6ykw1Q")
+      .link--tile__image
+        img(src="/img/youtube_thumb.png", data-no-retina="true")
+      .link--tile__caption Canal Youtube
