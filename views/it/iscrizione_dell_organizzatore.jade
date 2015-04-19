@@ -1,0 +1,41 @@
+---
+title: "Iscrizione dell’organizzatore "
+description: "Sei un’organizzatore del gruppo locale di Calasanz? Vieni con il gruppo in Polonia nel 2016? Vorresti ricevere l’attuali informazioni e news tramite mail?"
+---
+
+extends /layouts/it
+
+block content
+  h2
+    span Iscrizione dell’organizzatore
+  section.content--text.content--text-w-center
+    figure
+      div(style="width: 100%;padding-top:76.60%;position:relative")
+        img(src="/img/exemplary_group.jpg", alt="Exemplary Group Photo", style="position:absolute;top:0;left:0", data-no-retina="true")
+      figcaption L’esempio del gruppo insieme all’organizzatore Padre Raffaele Capo SP (<a href="http://instagram.com/p/y8hm-jyoFm/">la fonte</a>)
+    p Sei un’organizzatore del gruppo locale di Calasanz? Vieni con il gruppo in Polonia nel 2016? Vorresti <strong>ricevere l’attuali informazioni e news tramite mail</strong>?
+    p Compila il form – così ogni qualvolta appaia un informazione importante riguardante l’organizzazione, riceverai un email.
+    p.italic In più sapremo quante persone aspettarci e per quanti preparare. :)
+    form(action=loc._organiser_subscribe+".php", method="post")
+      .field
+        label(for="form--name") Come ti chiami?
+        input(type="text", name="name", id="form--name", placeholder="Padre Mario Rossi SP", required)
+      .field
+        label(for="form--email") Quale è il tuo indirizzo e-mail?
+        input(type="email", name="email", id="form--emails", placeholder="rossisp@gmail.com", required)
+      .field
+        label(for="form--city") Quale città e paese rappresenterai durante le GMG 2016?
+        input(type="text", name="city", id="form--city", placeholder="Roma, Italia", required)
+      .field
+        label(for="form--people") Con quante persone parteciperai alle GMG 2016? (a grandi linee)
+        input(type="text", name="people", id="form--people", placeholder="50", required)
+      .field
+        label A quali eventi hai intenzione di partecipare?
+        label(for="form--days_in_diocese")
+          input(type="checkbox", name="days_in_diocese", id="form--days_in_diocese", value="1")
+          |giorni nella Diocesi (20–25 Luglio 2016)
+        label(for="form--calasantian_day")
+          input(type="checkbox", name="calasantian_day", id="form--calasantian_day", value="1")
+          |Giorno di Calasanz (27 Luglio 2016).
+      .actions
+        input(type="submit", value="Iscrivimi")
