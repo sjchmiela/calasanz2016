@@ -9,8 +9,8 @@ module.exports =
   ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf']
 
   extensions: [
-    js_pipeline(files: 'assets/js/*.js', minify: true, hash: true),
-    css_pipeline(files: 'assets/css/*.styl', out: 'css/build.css', minify: true, hash: true),
+    js_pipeline(manifest: "assets/js/manifest.yml", out: 'js/build.css', minify: true, hash: true),
+    css_pipeline(manifest: 'assets/css/manifest.yml', out: 'css/build.css', minify: true, hash: true),
     dynamic_content()
   ]
 

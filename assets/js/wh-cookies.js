@@ -29,3 +29,37 @@ function WHCloseCookiesWindow() {
     GAReportView();
     document.getElementById('cookies-message-container').removeChild(document.getElementById('cookies-message'));
 }
+
+function WHCheckCookies() {
+    if(WHReadCookie('cookies_accepted') != 'T') {
+        var cookieTranslations = {
+          'en': {
+            'explanation': 'This site uses (cookies), thanks to which our site may work better.',
+            'button': 'I understand'
+          },
+          'es': {
+            'explanation': 'Esta página web usa \'cookies\' que ayudenla actuar mejor.',
+            'button': 'Entiendo'
+          },
+          'it': {
+            'explanation': 'Questa pagina utilizza i file cookie.',
+            'button': 'Capisco'
+          },
+          'pl': {
+            'explanation': 'Ta strona używa ciasteczek (cookies), dzięki którym nasz serwis może działać lepiej.',
+            'button': 'Rozumiem'
+          }
+        };
+        var message_container = document.createElement('div');
+        message_container.id = 'cookies-message-container';
+        var cookieTranslation = cookieTranslations[document.getElementsByTagName("html")[0].lang];
+        if(cookieTranslation == undefined) {
+          cookieTranslation = cookieTranslations['en'];
+        }
+        var html_code = '<div id="cookies-message"><p>'+cookieTranslation['explanation']+' <a href="javascript:WHCloseCookiesWindow();" id="accept-cookies-checkbox" name="accept-cookies" >'+cookieTranslation['button']+'</a></div>';
+        message_container.innerHTML = html_code;
+        document.body.appendChild(message_container);
+    } else {
+        GAReportView();
+    }
+}

@@ -1,4 +1,4 @@
-function WHCheckCookies() {
+function WHCheckCookiesPl() {
     if(WHReadCookie('cookies_accepted') != 'T') {
         var message_container = document.createElement('div');
         message_container.id = 'cookies-message-container';
@@ -9,5 +9,3 @@ function WHCheckCookies() {
         GAReportView();
     }
 }
-
-window.onload = WHCheckCookies;

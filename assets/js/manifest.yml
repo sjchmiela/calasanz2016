@@ -1,0 +1,6 @@
+# manifest.yml
+- jquery.min.js
+- nivo-lightbox.min.js
+- wh-cookies.js
+- retina.min.js
+- main.js

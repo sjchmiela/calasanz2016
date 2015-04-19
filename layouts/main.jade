@@ -34,6 +34,9 @@ html(lang=loc.lang)
         |  / 
         li
             a(href="/es/", class=(loc.lang == "es" ? "is-current" : "")) Español
+        |  / 
+        li
+            a(href="/it/", class=(loc.lang == "it" ? "is-current" : "")) Italiano
     header.header--main
         h1
             a(href="/"+loc.lang+"/")
@@ -60,6 +63,7 @@ html(lang=loc.lang)
         block content
     footer.footer--main
         p!=loc._Piarists_in_Poland+', <a href="mailto:'+loc.contact_mail+'">'+loc.contact_mail+'</a>'
-    script(type="text/javascript", src="/js/wh-cookies-"+loc.lang+".js")
-    script(type="text/javascript", src="/js/wh-cookies.js")
-    script(type="text/javascript", src="/js/retina.min.js")
+    !=js('/')
+    //- script(type="text/javascript", src="/js/wh-cookies-"+loc.lang+".js")
+    //- script(type="text/javascript", src="/js/wh-cookies.js")
+    //- script(type="text/javascript", src="/js/retina.min.js")

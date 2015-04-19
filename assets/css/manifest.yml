@@ -1,0 +1,5 @@
+# manifest.yml
+- _settings.styl
+- default.css
+- nivo-lightbox.css
+- master.styl
