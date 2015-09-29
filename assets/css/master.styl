@@ -1,5 +1,5 @@
 @import '_settings'
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin-ext,latin);
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin-ext,latin');
 
 // http://www.modularscale.com/?16&px&1.618,1.236&web&text
 
@@ -306,6 +306,34 @@ figure
 .wyd-blue
   color wyd-blue
 
+.content--news
+  background lighten(wyd-yellow, 97%)
+  border 1px solid wyd-yellow
+  box-shadow 0 0 0.655em lighten(wyd-yellow, 10%)
+  box-sizing border-box
+  padding 0 1em
+  margin 1em 0.655em 0 0.655em
+  ul
+    list-style-type none
+    padding-left 0
+
+.news--dates li
+  font-weight 700
+  font-size 0.809em
+  text-transform uppercase
+  letter-spacing 1px
+  color #888
+  border-bottom 1px solid #aaa
+
+.news--links li
+  font-weight 400
+  font-size 1em
+  text-transform none
+  letter-spacing 0
+  color #333
+  padding 0.382em 0
+  border-bottom none
+
 iframe, img
   max-width 100%
 
@@ -341,6 +369,12 @@ input[type="checkbox"]
 
 .field+.field, .field+.actions
   margin-top 1rem
+
+p.news--date
+  padding-bottom 1em
+  font-style italic
+  color #999
+  border-bottom 1px solid #bbb
 
 .page--violet
   h2, .nav--main a.is-current
