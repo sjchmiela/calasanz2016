@@ -55,12 +55,12 @@ a
   fs: 1rem
   line-height 1.618em
   border-bottom: 1px solid gray
-  text-align: center; 
-  position: fixed; 
-  top: 0px; 
+  text-align: center;
+  position: fixed;
+  top: 0px;
   background-color: silver
   background: rgba(221,221,221,0.93);
-  width: 100%; 
+  width: 100%;
   z-index: 999;
   box-shadow 0 0 1rem gray
 #accept-cookies-checkbox
@@ -299,12 +299,16 @@ figure
   float right
 .align-right
   text-align right
+.align-center
+  text-align center
 .wyd-red
   color wyd-red
 .wyd-yellow
   color wyd-yellow
 .wyd-blue
   color wyd-blue
+.wyd-violet
+  color wyd-violet
 
 .content--news
   background lighten(wyd-yellow, 97%)
@@ -363,7 +367,7 @@ input[type=submit]
 .actions
   text-align right
 
-input[type="checkbox"]
+input[type="checkbox"], input[type="radio"]
   margin-right 0.618rem
   margin 0.618rem 0.618rem 0.618rem 0
 
@@ -391,6 +395,20 @@ p.news--date
 
 .content--image__1_1
   max-width 40%
+
+.registration-option
+  border 1px solid wyd-violet
+  border-radius 1em
+  padding 0 1em 1em 1em
+  margin 1em -1em 1em -1em
+  h4
+    text-align center
+  .registration-option--details p
+    font-size 0.809em
+  .registration-option--linkWrapper
+    text-align center
+    font-weight bold
+
 
 +above(30rem)
   .nav--sidebar

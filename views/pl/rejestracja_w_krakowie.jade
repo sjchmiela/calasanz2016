@@ -1,0 +1,133 @@
+---
+title: "Rejestracja na ŚDM w Krakowie"
+description: ""
+body_class: "page--violet sdm-registration-form"
+---
+
+extends /layouts/pl
+
+block content
+  h2
+    span Rejestracja na ŚDM w Krakowie
+  section.content--text.content--text-w-center
+    p Jesteś uczniem Zespołu Szkół Pijarskich w Krakowie? Może absolwentem? Czujesz się związany z Duszpasterstwem Pijarów w Krakowie?
+    p Chciałbyś oficjalnie zarejestrować się jako uczestnik obchodów
+      strong  Światowych Dni Młodzieży 2016 w Krakowie
+      | ?
+    p.strong.align-center Odpowiedz na kilka pytań, aby przejść do formularza rejestracji.
+    .field
+      label(for="form--birthdate") Kiedy się urodziłeś?
+      input(type="text", name="birthdate", id="form--birthdate", placeholder="1995-03-21", required)
+    .field
+      label
+        strong W czym chciałbyś uczestniczyć
+        |  w ramach wykupionego Pakietu Pielgrzyma?
+      label(for="form-participation--a")
+        input(type="radio", name="participation", id="form-participation--a", value="A")
+        |We
+        strong  wszystkich
+        |  wydarzeniach od 25 lipca do 1 sierpnia.
+      label(for="form-participation--c")
+        input(type="radio", name="participation", id="form-participation--c", value="C")
+        strong Tylko
+        |  w Czuwaniu i Mszy Św. na zakończenie ŚDM – 30 i 31 lipca.
+    .field
+      label(for="form--details") Jak wolisz?
+      label(for="form-details--required")
+        input(type="radio", name="details", id="form-details--required", value="required")
+        | Uczestniczyć
+        strong  obowiązkowo
+        |  i pod opieką w całym programie ŚDM, ale
+        strong  w Pakiecie wykupić wyżywienie.
+      label(for="form-details--optional")
+        input(type="radio", name="details", id="form-details--optional", value="optional")
+        | Uczestniczyć
+        strong  dobrowolnie
+        |  w katechezach porannych Liceum/Wieczysta, w Dniu Kalasantyńskim i we wspólnym wyjściu na Campus Misericordiae, ale
+        strong  nie wykupić w Pakiecie Pielgrzyma wyżywienia.
+    h3 Możliwe opcje rejestracji
+    #schp20.registration-option
+      h4 Grupa SCHP20 KRK A4 od 18 w Calasanz2016
+      .registration-option--details
+        p
+          strong Uczestnicy:
+          |  Uczniowie LOZP, absolwenci obu szkół, w praktyce – każdy, kto się zgłosi.
+        p
+          strong Pakiet:
+          |  A4
+        p
+          strong Program:
+          |  Uczestniczą dobrowolnie w katechezach porannych Liceum/Wieczysta, w Dniu Kalasantyńskim i we wspólnym wyjściu na Campus Misericordiae.
+        p
+          strong Opiekun:
+          |  Ojciec Edward Kryściak SchP
+      p.registration-option--linkWrapper
+        a(href="#").registration-option--link Rejestruję się!
+    #schp21.registration-option
+      h4 Grupa SCHP21 KRK A4 od 18 w Calasanz2016
+      .registration-option--details
+        p
+          strong Uczestnicy:
+          |  Uczniowie LOZP, absolwenci obu szkół, w praktyce – każdy, kto się zgłosi.
+        p
+          strong Pakiet:
+          |  C
+        p
+          strong Program:
+          |  Uczestniczą dobrowolnie w katechezach porannych Liceum/Wieczysta, w Dniu Kalasantyńskim i we wspólnym wyjściu na Campus Misericordiae.
+        p
+          strong Opiekun:
+          |  Ojciec Edward Kryściak SchP
+      p.registration-option--linkWrapper
+        a(href="#").registration-option--link Rejestruję się!
+    #schp22.registration-option
+      h4 Grupa SCHP22 KRK A4 od 18 w Calasanz2016
+      .registration-option--details
+        p
+          strong Uczestnicy:
+          |  Tylko uczniowie Zespołu Szkół Zakonu Pijarów w Krakowie
+        p
+          strong Pakiet:
+          |  A4
+        p
+          strong Program:
+          |  Uczestniczą obowiązkowo i pod opieką w całym programie ŚDM.
+        p
+          strong Opiekun:
+          |  Diakon Bartłomiej Koszyk SchP
+      p.registration-option--linkWrapper
+        a(href="#").registration-option--link Rejestruję się!
+    #schp23.registration-option
+      h4 Grupa SCHP23 KRK A4 od 18 w Calasanz2016
+      .registration-option--details
+        p
+          strong Uczestnicy:
+          |  Tylko uczniowie Zespołu Szkół Zakonu Pijarów w Krakowie
+        p
+          strong Pakiet:
+          |  C
+        p
+          strong Program:
+          |  Wychodzą pod naszą opieką na Campus Misericordiae.
+        p
+          strong Opiekun:
+          |  Diakon Bartłomiej Koszyk SchP
+      p.registration-option--linkWrapper
+        a(href="#").registration-option--link Rejestruję się!
+    #schp.registration-option
+      h4 Grupa SCHP KRK A4 od 18 w Calasanz2016
+      .registration-option--details
+        p
+          strong Uczestnicy:
+          |  Uczniowie obu szkół i absolwenci, ewent. inne osoby związane z naszym duszpasterstwem.
+        p
+          strong Pakiet:
+          |  A2
+        p
+          strong Program:
+          |  Uczestniczą obowiązkowo i pod naszą opieką w całym programie ŚDM.
+        p
+          strong Opiekun:
+          |  Diakon Przemysław Suchy SchP
+      p.registration-option--linkWrapper
+        a(href="#").registration-option--link Rejestruję się!
