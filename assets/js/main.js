@@ -5,6 +5,7 @@ $(document).ready(function(){
     console.log(e);
     console.log(this);
   });
+  $('.datepicker').pickadate();
 });
 
 if (window.addEventListener) {

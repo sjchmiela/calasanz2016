@@ -1,5 +1,8 @@
 # manifest.yml
 - jquery.min.js
+- picker.js
+- picker.date.js
+- translations/pl_PL.js
 - nivo-lightbox.min.js
 - wh-cookies.js
 - retina.min.js
