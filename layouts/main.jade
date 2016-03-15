@@ -3,6 +3,7 @@
     - if (_path.match(/^\/(\w+)\//)[1] == val.lang)
         - loc = val
 - lang_path_prefix = "/"+loc.lang+"/"
+- post = post || {}
 doctype html
 html(lang=loc.lang)
   head
