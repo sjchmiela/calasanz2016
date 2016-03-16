@@ -5,7 +5,11 @@ $(document).ready(function(){
     console.log(e);
     console.log(this);
   });
-  $('.datepicker').pickadate();
+  $('.datepicker').pickadate({
+    selectYears: 30,
+    selectMonths: true,
+    max: true,
+  });
 });
 
 if (window.addEventListener) {
