@@ -14,38 +14,45 @@ block content
     p Chciałbyś oficjalnie zarejestrować się jako uczestnik obchodów
       strong  Światowych Dni Młodzieży 2016 w Krakowie
       | ?
-    p.strong.align-center Odpowiedz na kilka pytań, aby przejść do formularza rejestracji.
-    .field
-      label(for="form--birthdate") Kiedy się urodziłeś?
-      input(type="text", name="birthdate", id="form--birthdate", placeholder="1995-03-21", required).datepicker
-    .field
-      label
-        strong W czym chciałbyś uczestniczyć
-        |  w ramach wykupionego Pakietu Pielgrzyma?
-      label(for="form-participation--a")
-        input(type="radio", name="participation", id="form-participation--a", value="A")
-        |We
-        strong  wszystkich
-        |  wydarzeniach od 25 lipca do 1 sierpnia.
-      label(for="form-participation--c")
-        input(type="radio", name="participation", id="form-participation--c", value="C")
-        strong Tylko
-        |  w Czuwaniu i Mszy Św. na zakończenie ŚDM – 30 i 31 lipca.
-    .field
-      label(for="form--details") Jak wolisz?
-      label(for="form-details--required")
-        input(type="radio", name="details", id="form-details--required", value="required")
-        | Uczestniczyć
-        strong  obowiązkowo
-        |  i pod opieką w całym programie ŚDM, ale
-        strong  w Pakiecie wykupić wyżywienie.
-      label(for="form-details--optional")
-        input(type="radio", name="details", id="form-details--optional", value="optional")
-        | Uczestniczyć
-        strong  dobrowolnie
-        |  w katechezach porannych Liceum/Wieczysta, w Dniu Kalasantyńskim i we wspólnym wyjściu na Campus Misericordiae, ale
-        strong  nie wykupić w Pakiecie Pielgrzyma wyżywienia.
-    h3 Możliwe opcje rejestracji
+    p.strong Odpowiedz na kilka pytań, aby przejść do formularza rejestracji.
+    br
+    hr.wyd-violet
+    form.registration-form
+      .field
+        label(for="form--birthdate")
+          p Kiedy się urodziłeś?
+        input(type="text", name="birthdate", id="form--birthdate", placeholder="np. 13 czerwiec 1995", required).datepicker
+      .field.registration-form-options
+        p
+          strong W czym chciałbyś uczestniczyć
+          br
+          |  w ramach wykupionego Pakietu Pielgrzyma?
+        .registration-form-options-wrapper
+          input(type="radio", name="participation", id="form-participation--a", value="A")
+          label(for="form-participation--a")
+            |We
+            strong  wszystkich
+            |  wydarzeniach od 25 lipca do 1 sierpnia.
+          input(type="radio", name="participation", id="form-participation--c", value="C")
+          label(for="form-participation--c")
+            strong Tylko
+            |  w Czuwaniu i Mszy Św. na zakończenie ŚDM – 30 i 31 lipca.
+      .field.registration-form-options
+        p Jak wolisz?
+        .registration-form-options-wrapper
+          input(type="radio", name="details", id="form-details--required", value="required")
+          label(for="form-details--required")
+            | Uczestniczyć
+            strong  obowiązkowo
+            |  i pod opieką w całym programie ŚDM, ale
+            strong  w Pakiecie wykupić wyżywienie.
+          input(type="radio", name="details", id="form-details--optional", value="optional")
+          label(for="form-details--optional")
+            | Uczestniczyć
+            strong  dobrowolnie
+            |  w katechezach porannych Liceum/Wieczysta, w Dniu Kalasantyńskim i we wspólnym wyjściu na Campus Misericordiae, ale
+            strong  nie wykupić w Pakiecie Pielgrzyma wyżywienia.
+    h1 Możliwe opcje rejestracji
     #schp20.registration-option
       h4 Grupa SCHP20 KRK A4 od 18 w Calasanz2016
       .registration-option--details

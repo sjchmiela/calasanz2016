@@ -24,6 +24,8 @@ hr
   margin 1em 0
   background: linear-gradient(left, white, #aaa, white);
   width 100%
+hr.wyd-violet
+  background: linear-gradient(left, white, wyd-violet, white);
 a
   reset-link()
 .italic
@@ -400,7 +402,7 @@ p.news--date
   border 1px solid wyd-violet
   border-radius 1em
   padding 0 1em 1em 1em
-  margin 1em -1em 1em -1em
+  margin 1em auto
   h4
     text-align center
   .registration-option--details p
@@ -408,6 +410,40 @@ p.news--date
   .registration-option--linkWrapper
     text-align center
     font-weight bold
+
+.registration-form
+  p
+    text-align center
+    font-size 1.382em
+    margin-top 1.618em
+    line-height 1.618em
+  label
+    text-transform none
+    font-size 1em
+  input[type=text]
+    text-align center
+  .registration-form-options label, input[type=text]
+    border-radius 0.2em
+    border 1px solid wyd-violet
+    text-transform none
+    padding 1em
+    margin 1em auto
+    cursor pointer
+    transition all 0.1s
+  .registration-form-options label:hover, input[type=text]:hover
+    box-shadow 0 0.056em 0.382em rgba(91,14,197,0.7)
+    transition all 0.1s
+  .registration-form-options
+    text-align center
+    vertical-align 0
+    input[type=radio]
+      display none
+    input[type=radio]:checked + label
+      box-shadow inset 0 0.09em 0.382em rgba(91,14,197,0.7)
+      transition all 0.1s
+    input[type=radio]:checked + label:hover
+      box-shadow inset 0 0.09em 0.382em rgba(91,14,197,0.4)
+      transition all 0.1s
 
 
 +above(30rem)
@@ -421,6 +457,15 @@ p.news--date
         margin-left 5%
 
 +above(37rem)
+  .registration-form .registration-form-options label
+    box-sizing border-box
+    display inline-block
+    width 47%
+    margin-right 2.5%
+  .registration-form .registration-form-options-wrapper
+    display flex
+    justify-content space-between
+
   .nav--lang, .content--main, .nav--main, .header--main
     width 35rem
     margin 0 auto
