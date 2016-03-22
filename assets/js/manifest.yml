@@ -1,5 +1,6 @@
 # manifest.yml
 - jquery.min.js
+- moment.js
 - picker.js
 - picker.date.js
 - translations/pl_PL.js

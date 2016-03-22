@@ -22,6 +22,8 @@ block content
         label(for="form--birthdate")
           p Kiedy się urodziłeś?
         input(type="text", name="birthdate", id="form--birthdate", placeholder="np. 13 czerwiec 1995", required).datepicker
+        p#age.hidden Ukończonych lat w dniu rozpoczęcia Światowych Dni Młodzieży (24 sierpnia 2016): 
+          span
       .field.registration-form-options
         p
           strong W czym chciałbyś uczestniczyć
@@ -38,7 +40,7 @@ block content
             strong Tylko
             |  w Czuwaniu i Mszy Św. na zakończenie ŚDM – 30 i 31 lipca.
       .field.registration-form-options
-        p Jak wolisz?
+        p Co wolisz?
         .registration-form-options-wrapper
           input(type="radio", name="details", id="form-details--required", value="required")
           label(for="form-details--required")
@@ -52,7 +54,15 @@ block content
             strong  dobrowolnie
             |  w katechezach porannych Liceum/Wieczysta, w Dniu Kalasantyńskim i we wspólnym wyjściu na Campus Misericordiae, ale
             strong  nie wykupić w Pakiecie Pielgrzyma wyżywienia.
-    h1 Możliwe opcje rejestracji
+    h3 Możliwe opcje rejestracji
+    #tooYoung.registration-option.hidden-1
+      h4 Nie znaleziono możliwości rejestracji
+      p Przykro nam, ale niestety jesteś za młody/młoda, aby wziąć z nami udział w Światowych Dniach Młodzieży.
+      p.strong Zapraszamy następnym razem! :)
+    #tooOld.registration-option.hidden-1
+      h4 Nie znaleziono możliwości rejestracji
+      p Przykro nam, ale niestety nie możemy zarejestrować Cię do uczestnictwa w Światowych Dniach Młodzieży.
+      p.strong Jesteśmy pewni, że i tak sobie poradzisz.
     #schp20.registration-option
       h4 Grupa SCHP20 KRK A4 od 18 w Calasanz2016
       .registration-option--details
@@ -136,5 +146,15 @@ block content
         p
           strong Opiekun:
           |  Diakon Przemysław Suchy SchP
+      p.registration-option--linkWrapper
+        a(href="#").registration-option--link Rejestruję się!
+    #hosts.registration-option
+      h4 Gospodarze
+      .registration-option--details
+        p Pełnoletni mogą się rejestrować jako wolontariusze ŚDM z przydziałem do parafii na Dzielskiego.
+        p Niepełnoletni mogą być zarejestrowani w komitecie parafialnym na Dzielskiego jeśli dostaną gwarancję udziału w imprezach centralnych, w przeciwnym razie – w jednej z powyższych grup. 
+        p
+          strong Opiekun:
+          |  Ojciec Mariusz Siódmiak SchP
       p.registration-option--linkWrapper
         a(href="#").registration-option--link Rejestruję się!
