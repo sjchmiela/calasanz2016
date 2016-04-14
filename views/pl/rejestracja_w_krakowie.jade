@@ -10,151 +10,220 @@ block content
   h2
     span Rejestracja na ŚDM w Krakowie
   section.content--text.content--text-w-center
-    p Jesteś uczniem Zespołu Szkół Pijarskich w Krakowie? Może absolwentem? Czujesz się związany z Duszpasterstwem Pijarów w Krakowie?
-    p Chciałbyś oficjalnie zarejestrować się jako uczestnik obchodów
-      strong  Światowych Dni Młodzieży 2016 w Krakowie
-      | ?
-    p.strong Odpowiedz na kilka pytań, aby przejść do formularza rejestracji.
-    br
+    p Jesteś uczniem Gimnazjum lub Liceum Pijarów w Krakowie? Absolwentem tych szkół? Jesteś z nimi związany w inny sposób?
+    p Chcesz się zarejestrować, żeby wziąć udział w
+      strong  Światowych Dniach Młodzieży w Krakowie
+      |  od 26 do 31 lipca 2016 r.?
+    p.strong Jeżeli tak, odpowiedz na pytania, które pozwolą Cię przydzielić do konkretnej grupy.
+    noscript
+      p Twoja przeglądarka nie uruchamia Javascriptu. Nie będzie pytań, nadal jednak możesz przeglądnąć opcje rejestracji.
     hr.wyd-violet
     form.registration-form
-      .field
+      #current_student.field.registration-form-options.hidden
+        p
+          strong Jesteś uczniem Gimnazjum lub Liceum w Krakowie?
+        .registration-form-options-wrapper
+          input(type="radio", name="current_student", id="current_student--yes", value="1")
+          label(for="current_student--yes")
+            | Tak
+          input(type="radio", name="current_student", id="current_student--no", value="0")
+          label(for="current_student--no")
+            | Nie
+      #alumnus.field.registration-form-options.hidden
+        p
+          strong Jesteś absolwentem Gimnazjum lub Liceum w Krakowie?
+        .registration-form-options-wrapper
+          input(type="radio", name="alumnus", id="alumnus--yes", value="1")
+          label(for="alumnus--yes")
+            | Tak
+          input(type="radio", name="alumnus", id="alumnus--no", value="0")
+          label(for="alumnus--no")
+            | Nie
+      #other_connection.field.registration-form-options.hidden
+        p
+          strong Jesteś w inny sposób związany ze szkołami pijarskimi w Krakowie?
+        .registration-form-options-wrapper
+          input(type="radio", name="other_connection", id="other_connection--yes", value="1")
+          label(for="other_connection--yes")
+            | Tak
+          input(type="radio", name="other_connection", id="other_connection--no", value="0")
+          label(for="other_connection--no")
+            | Nie
+      #birthdate.field.hidden
         label(for="form--birthdate")
           p Kiedy się urodziłeś?
         input(type="text", name="birthdate", id="form--birthdate", placeholder="np. 13 czerwiec 1995", required).datepicker
         p#age.hidden Ukończonych lat w dniu rozpoczęcia Światowych Dni Młodzieży (24 sierpnia 2016): 
           span
-      .field.registration-form-options
+      #lodging.field.registration-form-options.hidden
         p
-          strong W czym chciałbyś uczestniczyć
+          strong Potrzebujesz zamieszkać w szkole w czasie ŚDM?
+        .registration-form-options-wrapper
+          input(type="radio", name="lodging", id="lodging--yes", value="1")
+          label(for="lodging--yes")
+            | Tak
+          input(type="radio", name="lodging", id="lodging--no", value="0")
+          label(for="lodging--no")
+            | Nie
+      #participation.field.registration-form-options.hidden
+        p
+          | Chcesz uczestniczyć w dniach: 
           br
-          |  w ramach wykupionego Pakietu Pielgrzyma?
+          strong 25–31.07
+          | , czy 
+          strong 30–31.07
+          | ?
         .registration-form-options-wrapper
-          input(type="radio", name="participation", id="form-participation--a", value="A")
-          label(for="form-participation--a")
-            |We
-            strong  wszystkich
-            |  wydarzeniach od 25 lipca do 1 sierpnia.
-          input(type="radio", name="participation", id="form-participation--c", value="C")
-          label(for="form-participation--c")
-            strong Tylko
-            |  w Czuwaniu i Mszy Św. na zakończenie ŚDM – 30 i 31 lipca.
-      .field.registration-form-options
-        p Co wolisz?
-        .registration-form-options-wrapper
-          input(type="radio", name="details", id="form-details--required", value="required")
-          label(for="form-details--required")
-            | Uczestniczyć
-            strong  obowiązkowo
-            |  i pod opieką w całym programie ŚDM, ale
-            strong  w Pakiecie wykupić wyżywienie.
-          input(type="radio", name="details", id="form-details--optional", value="optional")
-          label(for="form-details--optional")
-            | Uczestniczyć
-            strong  dobrowolnie
-            |  w katechezach porannych Liceum/Wieczysta, w Dniu Kalasantyńskim i we wspólnym wyjściu na Campus Misericordiae, ale
-            strong  nie wykupić w Pakiecie Pielgrzyma wyżywienia.
-    h3 Możliwe opcje rejestracji
-    #tooYoung.registration-option.hidden-1
-      h4 Nie znaleziono możliwości rejestracji
-      p Przykro nam, ale niestety jesteś za młody/młoda, aby wziąć z nami udział w Światowych Dniach Młodzieży.
-      p.strong Zapraszamy następnym razem! :)
+          input(type="radio", name="participation", id="form-participation--full", value="full")
+          label(for="form-participation--full")
+            | 25–31.07
+          input(type="radio", name="participation", id="form-participation--part", value="part")
+          label(for="form-participation--part")
+            | 30–31.07
+    h3#chosenOption Opcje rejestracji
+    #nonAuthorized.registration-option.hidden-1
+      p Nie rejestrujemy osób niepełnoletnich, które nie są uczniami lub absolwentami pijarskimi.
+    #globalRegister.registration-option.hidden-1
+      p Przejdź do strony <a href="http://www.krakow2016.com/">krakow2016.com</a>, żeby uzyskać więcej informacji lub napisz maila na adres <a href="mailto:sdm@calasanz2016.com">sdm@calasanz2016.com</a>.
     #tooOld.registration-option.hidden-1
-      h4 Nie znaleziono możliwości rejestracji
-      p Przykro nam, ale niestety nie możemy zarejestrować Cię do uczestnictwa w Światowych Dniach Młodzieży.
-      p.strong Jesteśmy pewni, że i tak sobie poradzisz.
-    #schp20.registration-option
-      h4 Grupa SCHP20 KRK A4 od 18 w Calasanz2016
+      p Udział w ŚDM jest proponowany osobom do 30 roku życia. Jeżeli chcesz się zarejestrować w grupie pijarskiej, napisz maila na adres 
+        a(href="mailto:sdm@calasanz2016.com") sdm@calasanz2016.com
+        | .
+    #infoA2nocleg1.registration-option
+      h4 INFO A2 NOCLEG1
       .registration-option--details
+        p Jesteś uczniem Gimnazjum lub Liceum Pijarów w Krakowie lub absolwentem tego Gimnazjum, nie masz ukończonych 18 lat, chcesz wziąć udział w Światowych Dniach Młodzieży przez cały tydzień i mieszkać w budynku Liceum (ul. Akacjowa 5) lub Gimnazjum (ul. Dzielskiego 1) w Krakowie.
         p
-          strong Uczestnicy:
-          |  Uczniowie LOZP, absolwenci obu szkół, w praktyce – każdy, kto się zgłosi.
+          strong Jeżeli te stwierdzenia są prawdziwe, czytaj dalej.
+          br
+          | Jeżeli coś się w nich nie zgadza, wyślij maila na adres: sdm@calasanz2016.com.
+        p Zostaniesz zarejestrowany w grupie: <strong>SCHP28 KRK [nr]</strong> w ramach makrogrupy Archidiecezji Krakowskiej [nr].
+        p Opiekunem grupy jest o. Przemysław Suchy (mail: <a href="mailto:nocleg@calasanz2016.com">nocleg@calasanz2016.com</a>). <strong>Zapoznaj się z regulaminem ([R1]), obowiązującym w tej grupie.</strong>
+        p Opłata wynosi:
+        ul
+          li 531 zł — pakiet pielgrzyma A2 ze zniżką 10% dla grup z Polski (przekażemy organizatorom ŚDM), więcej informacji na stronie <a href="http://www.krakow2016.com/pakiet-pielgrzyma">http://www.krakow2016.com/pakiet-pielgrzyma</a>.
+          li 43 zł — równowartość 10 Euro obowiązkowej składki na Fundusz Solidarnościowy (przekażemy organizatorom ŚDM),
+          li 50 zł — koszt śniadań w miejscu noclegu (kwota jest dla organizatorów noclegu).
+        p czyli w sumie <strong>624 zł</strong>.
         p
-          strong Pakiet:
-          |  A4
-        p
-          strong Program:
-          |  Uczestniczą dobrowolnie w katechezach porannych Liceum/Wieczysta, w Dniu Kalasantyńskim i we wspólnym wyjściu na Campus Misericordiae.
-        p
-          strong Opiekun:
-          |  Ojciec Edward Kryściak SchP
-      p.registration-option--linkWrapper
-        a(href="#").registration-option--link Rejestruję się!
-    #schp21.registration-option
-      h4 Grupa SCHP21 KRK A4 od 18 w Calasanz2016
+          strong Jeżeli chcesz się zarejestrować:
+        ol
+          li Wypełnij formularz [F2].
+          li Zostaw w sekretariacie Liceum Ogólnokształcącego Zakonu Pijarów podpisaną przez Twoich rodziców/prawnych opiekunów zgodę na udział w ŚDM (tekst do ściągnięcia tutaj [ZK1]).
+          li Przelej podaną kwotę na konto: Kolegium Zakonu Pijarów, 68 1600 1013 1846 1965 9000 0004 lub wpłać ją w gotówce u o. Edwarda Kryściaka SP w Liceum.
+        p Po wykonaniu tych czynności otrzymasz mailem potwierdzenie dokonania rejestracji.
+        p 25 lipca od godz. 8.00 możesz zgłosić się w Liceum Ogólnokształcącym Zakonu Pijarów przy ul. Akacjowej 5 w Krakowie. Tam otrzymasz nocleg oraz pakiet uczestnika zawierający plecak, wejściówkę na imprezy centralne, materiały, ubezpieczenie oraz bony żywnościowe (obiad 25.07 musisz zapewnić sobie we własnym zakresie!)
+    #infoA2nocleg2.registration-option
+      h4 INFO A2 NOCLEG2
       .registration-option--details
+        p Masz ukończone 18 lat, chcesz wziąć udział w Światowych Dniach Młodzieży przez cały tydzień i mieszkać w budynku Liceum (ul. Akacjowa 5) lub Gimnazjum (ul. Dzielskiego 1) w Krakowie.
         p
-          strong Uczestnicy:
-          |  Uczniowie LOZP, absolwenci obu szkół, w praktyce – każdy, kto się zgłosi.
+          strong Jeżeli te stwierdzenia są prawdziwe, czytaj dalej.
+          br
+          | Jeżeli coś się w nich nie zgadza, wyślij maila na adres: sdm@calasanz2016.com.
+        p Zostaniesz zarejestrowany w grupie: <strong>SCHP28 KRK [nr]</strong> w ramach makrogrupy Archidiecezji Krakowskiej [nr].
+        p Opiekunem grupy jest o. Przemysław Suchy (mail: <a href="mailto:nocleg@calasanz2016.com">nocleg@calasanz2016.com</a>). <strong>Zapoznaj się z regulaminem ([R1]), obowiązującym w tej grupie.</strong>
+        p Opłata wynosi:
+        ul
+          li 531 zł — pakiet pielgrzyma A2 ze zniżką 10% dla grup z Polski (przekażemy organizatorom ŚDM), więcej informacji na stronie <a href="http://www.krakow2016.com/pakiet-pielgrzyma">http://www.krakow2016.com/pakiet-pielgrzyma</a>.
+          li 43 zł — równowartość 10 Euro obowiązkowej składki na Fundusz Solidarnościowy (przekażemy organizatorom ŚDM),
+          li 50 zł — koszt śniadań w miejscu noclegu (kwota jest dla organizatorów noclegu).
+        p czyli w sumie <strong>624 zł</strong>.
         p
-          strong Pakiet:
-          |  C
-        p
-          strong Program:
-          |  Uczestniczą dobrowolnie w katechezach porannych Liceum/Wieczysta, w Dniu Kalasantyńskim i we wspólnym wyjściu na Campus Misericordiae.
-        p
-          strong Opiekun:
-          |  Ojciec Edward Kryściak SchP
-      p.registration-option--linkWrapper
-        a(href="#").registration-option--link Rejestruję się!
-    #schp22.registration-option
-      h4 Grupa SCHP22 KRK A4 od 18 w Calasanz2016
+          strong Jeżeli chcesz się zarejestrować:
+        ol
+          li Wypełnij formularz [F1].
+          li Zaczekaj na potwierdzenie mailem przyjęcia Twojego zgłoszenia.
+          li Przelej podaną kwotę na konto: Kolegium Zakonu Pijarów, 68 1600 1013 1846 1965 9000 0004 lub wpłać ją w gotówce u o. Edwarda Kryściaka SP w Liceum.
+        p Po wykonaniu tych czynności otrzymasz mailem potwierdzenie dokonania rejestracji.
+        p 25 lipca od godz. 8.00 możesz zgłosić się w Liceum Ogólnokształcącym Zakonu Pijarów przy ul. Akacjowej 5 w Krakowie. Tam otrzymasz nocleg oraz pakiet uczestnika zawierający plecak, wejściówkę na imprezy centralne, materiały, ubezpieczenie oraz bony żywnościowe (obiad 25.07 musisz zapewnić sobie we własnym zakresie!)
+    #info20.registration-option
+      h4 SCHP20 KRK A4 od 18
       .registration-option--details
+        p Masz ukończone 18 lat, chcesz wziąć udział w Światowych Dniach Młodzieży przez cały tydzień i masz zapewnione mieszkanie oraz wyżywienie.
         p
-          strong Uczestnicy:
-          |  Tylko uczniowie Zespołu Szkół Zakonu Pijarów w Krakowie
+          strong Jeżeli te stwierdzenia są prawdziwe, czytaj dalej.
+          br
+          | Jeżeli coś się w nich nie zgadza, wyślij maila na adres: sdm@calasanz2016.com.
+        p Zostaniesz zarejestrowany w grupie: <strong>SCHP20 KRK A4 od 18 (P-3036-00-7426) w ramach makrogrupy Calasanz2016 (P-3036-00)</strong>.
+        p Opiekunem grupy jest o. Edward Kryściak (mail: <a href="mailto:szkola@calasanz2016.com">szkola@calasanz2016.com</a>). Zastępcą opiekuna grupy jest Patrycja Kieblesz.
+        p Opłata wynosi:
+        ul
+          li 190 zł — za pakiet pielgrzyma A4 (przekażemy organizatorom ŚDM), więcej informacji na stronie <a href="http://www.krakow2016.com/pakiet-pielgrzyma">http://www.krakow2016.com/pakiet-pielgrzyma</a>.
+          li 43 zł — równowartość 10 Euro obowiązkowej składki na Fundusz Solidarnościowy (przekażemy organizatorom ŚDM).
+        p czyli w sumie <strong>233 zł</strong>.
         p
-          strong Pakiet:
-          |  A4
-        p
-          strong Program:
-          |  Uczestniczą obowiązkowo i pod opieką w całym programie ŚDM.
-        p
-          strong Opiekun:
-          |  Diakon Bartłomiej Koszyk SchP
-      p.registration-option--linkWrapper
-        a(href="#").registration-option--link Rejestruję się!
-    #schp23.registration-option
-      h4 Grupa SCHP23 KRK A4 od 18 w Calasanz2016
+          strong Jeżeli chcesz się zarejestrować:
+        ol
+          li Wypełnij formularz [F3].
+          li Przelej podaną kwotę na konto: Kolegium Zakonu Pijarów, 68 1600 1013 1846 1965 9000 0004 lub wpłać ją w gotówce u o. Edwarda Kryściaka SP w Liceum.
+        p Po wykonaniu tych czynności otrzymasz mailem potwierdzenie dokonania rejestracji.
+        p 25 lipca od godz. 8.00 w Liceum Ogólnokształcącym Zakonu Pijarów przy ul. Akacjowej 5 w Krakowie otrzymasz pakiet uczestnika zawierający plecak, wejściówkę na imprezy centralne, materiały oraz ubezpieczenie.
+    #info21.registration-option
+      h4 SCHP21 KRK C od 18
       .registration-option--details
+        p Masz ukończone 18 lat, chcesz wziąć udział w czuwaniu i Mszy Świętej z papieżem Franciszkiem w ramach Światowych Dniach Młodzieży. Sam zorganizujesz sobie jedzenie.
         p
-          strong Uczestnicy:
-          |  Tylko uczniowie Zespołu Szkół Zakonu Pijarów w Krakowie
+          strong Jeżeli te stwierdzenia są prawdziwe, czytaj dalej.
+          br
+          | Jeżeli coś się w nich nie zgadza, wyślij maila na adres: sdm@calasanz2016.com.
+        p Zostaniesz zarejestrowany w grupie: <strong>SCHP21 KRK C od 18 (P-3036-00-7427) w ramach makrogrupy Calasanz2016 (P-3036-00)</strong>.
+        p Opiekunem grupy jest o. Edward Kryściak (mail: <a href="mailto:szkola@calasanz2016.com">szkola@calasanz2016.com</a>). Zastępcą opiekuna grupy jest Patrycja Kieblesz.
+        p Opłata wynosi:
+        ul
+          li 150 zł — za pakiet pielgrzyma A4 (przekażemy organizatorom ŚDM), więcej informacji na stronie <a href="http://www.krakow2016.com/pakiet-pielgrzyma">http://www.krakow2016.com/pakiet-pielgrzyma</a>.
+          li 43 zł — równowartość 10 Euro obowiązkowej składki na Fundusz Solidarnościowy (przekażemy organizatorom ŚDM).
+        p czyli w sumie <strong>193 zł</strong>.
         p
-          strong Pakiet:
-          |  C
-        p
-          strong Program:
-          |  Wychodzą pod naszą opieką na Campus Misericordiae.
-        p
-          strong Opiekun:
-          |  Diakon Bartłomiej Koszyk SchP
-      p.registration-option--linkWrapper
-        a(href="#").registration-option--link Rejestruję się!
-    #schp.registration-option
-      h4 Grupa SCHP KRK A4 od 18 w Calasanz2016
+          strong Jeżeli chcesz się zarejestrować:
+        ol
+          li Wypełnij formularz [F3].
+          li Przelej podaną kwotę na konto: Kolegium Zakonu Pijarów, 68 1600 1013 1846 1965 9000 0004 lub wpłać ją w gotówce u o. Edwarda Kryściaka SP w Liceum.
+        p Po wykonaniu tych czynności otrzymasz mailem potwierdzenie dokonania rejestracji.
+        p 25 lipca od godz. 8.00 w Liceum Ogólnokształcącym Zakonu Pijarów przy ul. Akacjowej 5 w Krakowie otrzymasz pakiet uczestnika zawierający plecak, wejściówkę na imprezy centralne, materiały oraz ubezpieczenie.
+    #info22.registration-option
+      h4 SCHP22 KRK A4 do 18
       .registration-option--details
+        p Jesteś uczniem Gimnazjum czy Liceum Pijarów w Krakowie lub absolwentem tego Gimnazjum, nie masz ukończonych 18 lat, chcesz wziąć udział w Światowych Dniach Młodzieży razem z innymi grupami pijarskimi przez cały tydzień i masz zapewnione mieszkanie oraz wyżywienie.
         p
-          strong Uczestnicy:
-          |  Uczniowie obu szkół i absolwenci, ewent. inne osoby związane z naszym duszpasterstwem.
+          strong Jeżeli te stwierdzenia są prawdziwe, czytaj dalej.
+          br
+          | Jeżeli coś się w nich nie zgadza, wyślij maila na adres: sdm@calasanz2016.com.
+        p Zostaniesz zarejestrowany w grupie: <strong>SCHP22 KRK A4 do 18 (P-3036-00-7428) w ramach makrogrupy Calasanz2016 (P-3036-00)</strong>.
+        p Opiekunem grupy jest o. Bartłomiej Koszyk (mail: <a href="mailto:opieka@calasanz2016.com">opieka@calasanz2016.com</a>). Zapoznaj się z regulaminem [R2], obowiązującym w tej grupie.
+        p Opłata wynosi:
+        ul
+          li 190 zł — za pakiet pielgrzyma A4 (przekażemy organizatorom ŚDM), więcej informacji na stronie <a href="http://www.krakow2016.com/pakiet-pielgrzyma">http://www.krakow2016.com/pakiet-pielgrzyma</a>.
+          li 43 zł — równowartość 10 Euro obowiązkowej składki na Fundusz Solidarnościowy (przekażemy organizatorom ŚDM).
+        p czyli w sumie <strong>233 zł</strong>.
         p
-          strong Pakiet:
-          |  A2
-        p
-          strong Program:
-          |  Uczestniczą obowiązkowo i pod naszą opieką w całym programie ŚDM.
-        p
-          strong Opiekun:
-          |  Diakon Przemysław Suchy SchP
-      p.registration-option--linkWrapper
-        a(href="#").registration-option--link Rejestruję się!
-    #hosts.registration-option
-      h4 Gospodarze
+          strong Jeżeli chcesz się zarejestrować:
+        ol
+          li Wypełnij formularz [F2].
+          li Zostaw w sekretariacie Liceum Ogólnokształcącego Zakonu Pijarów podpisaną przez Twoich rodziców/prawnych opiekunów zgodę na udział w ŚDM (tekst do ściągnięcia tutaj [ZK2]).
+          li Przelej podaną kwotę na konto: Kolegium Zakonu Pijarów, 68 1600 1013 1846 1965 9000 0004 lub wpłać ją w gotówce u o. Edwarda Kryściaka SP w Liceum.
+        p Po wykonaniu tych czynności otrzymasz mailem potwierdzenie dokonania rejestracji.
+        p 25 lipca od godz. 8.00 w Liceum Ogólnokształcącym Zakonu Pijarów przy ul. Akacjowej 5 w Krakowie otrzymasz pakiet uczestnika zawierający plecak, wejściówkę na imprezy centralne, materiały oraz ubezpieczenie.
+    #info23.registration-option
+      h4 SCHP23 KRK A4 do 18
       .registration-option--details
-        p Pełnoletni mogą się rejestrować jako wolontariusze ŚDM z przydziałem do parafii na Dzielskiego.
-        p Niepełnoletni mogą być zarejestrowani w komitecie parafialnym na Dzielskiego jeśli dostaną gwarancję udziału w imprezach centralnych, w przeciwnym razie – w jednej z powyższych grup. 
+        p Jesteś uczniem Gimnazjum czy Liceum Pijarów w Krakowie lub absolwentem tego Gimnazjum, nie masz ukończonych 18 lat, chcesz wziąć udział czuwaniu i Mszy Świętej z papieżem Franciszkiem w ramach Światowych Dniach Młodzieży razem z innymi grupami pijarskimi i masz zapewnione wyżywienie.
         p
-          strong Opiekun:
-          |  Ojciec Mariusz Siódmiak SchP
-      p.registration-option--linkWrapper
-        a(href="#").registration-option--link Rejestruję się!
+          strong Jeżeli te stwierdzenia są prawdziwe, czytaj dalej.
+          br
+          | Jeżeli coś się w nich nie zgadza, wyślij maila na adres: sdm@calasanz2016.com.
+        p Zostaniesz zarejestrowany w grupie: <strong>SCHP22 KRK C do 18 (P-3036-00-7429) w ramach makrogrupy Calasanz2016 (P-3036-00)</strong>.
+        p Opiekunem grupy jest o. Bartłomiej Koszyk (mail: <a href="mailto:opieka@calasanz2016.com">opieka@calasanz2016.com</a>). Zapoznaj się z regulaminem [R2], obowiązującym w tej grupie.
+        p Opłata wynosi:
+        ul
+          li 150 zł — za pakiet pielgrzyma A4 (przekażemy organizatorom ŚDM), więcej informacji na stronie <a href="http://www.krakow2016.com/pakiet-pielgrzyma">http://www.krakow2016.com/pakiet-pielgrzyma</a>.
+          li 43 zł — równowartość 10 Euro obowiązkowej składki na Fundusz Solidarnościowy (przekażemy organizatorom ŚDM).
+        p czyli w sumie <strong>193 zł</strong>.
+        p
+          strong Jeżeli chcesz się zarejestrować:
+        ol
+          li Wypełnij formularz [F2].
+          li Zostaw w sekretariacie Liceum Ogólnokształcącego Zakonu Pijarów podpisaną przez Twoich rodziców/prawnych opiekunów zgodę na udział w ŚDM (tekst do ściągnięcia tutaj [ZK2]).
+          li Przelej podaną kwotę na konto: Kolegium Zakonu Pijarów, 68 1600 1013 1846 1965 9000 0004 lub wpłać ją w gotówce u o. Edwarda Kryściaka SP w Liceum.
+        p Po wykonaniu tych czynności otrzymasz mailem potwierdzenie dokonania rejestracji.
+        p 25 lipca od godz. 8.00 w Liceum Ogólnokształcącym Zakonu Pijarów przy ul. Akacjowej 5 w Krakowie otrzymasz pakiet uczestnika zawierający plecak, wejściówkę na imprezy centralne, materiały oraz ubezpieczenie.
