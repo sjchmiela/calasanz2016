@@ -52,8 +52,47 @@ function ask(question) {
   console.log('shown question #' + question);
 }
 
-function group(identifier) {
+var groupFormLinks = {
+  '#infoA2nocleg1': {
+    'student': "https://docs.google.com/forms/d/1yx-C14CD4mVXaSwvscx3POqM40fmvABNe3CkHhaEKnA/viewform?entry.2073369867=",
+    'alumnus': "https://docs.google.com/forms/d/17Uck_t494UGnpKQCcz3ydd7rg241EQbJVEhKnMER-rk/viewform?entry.2073369867="
+  },
+  '#infoA2nocleg2': {
+    'student': "https://docs.google.com/forms/d/1CWNBCcISxgSXQlBVnlCcOoSH0800n2oX8QAC-9s8jp8/viewform?entry.2073369867=",
+    'alumnus': "https://docs.google.com/forms/d/1eI6WBbLBEwAKr5UpguLu7vGcJsiB_EKIjhmylumhwI0/viewform?entry.2073369867=",
+    'connected': "https://docs.google.com/forms/d/1LSLcQ5H0ArEOC3OtNSxa5jiD4eLDORfozyshTBY-RfU/viewform?entry.2073369867="
+  },
+  '#info20': {
+    'student': "https://docs.google.com/forms/d/1eiqTzljYMEqkEhKFIrhZu1KZ7XQLDLfxzthAzfjPL7A/viewform?entry.2073369867=",
+    'alumnus': "https://docs.google.com/forms/d/1zNuImq_kgxhtF6sL6j9H3-5NSrBKN5BVRpsU0CnehWw/viewform?entry.2073369867=",
+    'connected': "https://docs.google.com/forms/d/10HvkW2NBMg-QcZH19fnL_8WHj8SJ7TphS4TT_TglkVQ/viewform?entry.2073369867="
+  },
+  "info21": {
+    'student': "https://docs.google.com/forms/d/1jCJwQneRklp08-H-Dg8FgjuezzjOLpyYHYIk-PsnCIo/viewform?entry.2073369867=",
+    'alumnus': "https://docs.google.com/forms/d/1nz0AtaFcZ6Lj_gDKnDrKkuXwcCO3oRPizfYpqQiPMaM/viewform?entry.2073369867=",
+    'connected': "https://docs.google.com/forms/d/1_S-BCTLZkXhG2CYMpLKxOerXlfRkvTup0r2nmI-Z_Qc/viewform?entry.2073369867="
+  },
+  "info22": {
+    'student': "https://docs.google.com/forms/d/1C3BuUm3sVFu7t0SOE8f47LwM03bb6ebh7y6GaZQoG7A/viewform?entry.1601380937=",
+    'alumnus': "https://docs.google.com/forms/d/1hBiJjCve4j7MR0X9p8eTSyAnBOhf-AmNl9gMe2lEMUo/viewform?entry.654144946="
+  },
+  "info23": {
+    'student': "https://docs.google.com/forms/d/1q5Tf5AVS3KLqPULembh8J0C0EfoPrhNt4A4peepRIlg/viewform?entry.2073369867=",
+    'alumnus': "https://docs.google.com/forms/d/1hSrjl97H_a-cY3mOe-v6T-uR1pOLNOedtWpVEwR50rw/viewform?entry.2073369867="
+  }
+};
+
+function group(identifier, student = false, alumnus = false, connected = false) {
   $(identifier).show();
+  var link_href = "";
+  if (student) {
+    link_href = groupFormLinks[identifier]['student'];
+  } else if (alumnus) {
+    link_href = groupFormLinks[identifier]['alumnus'];
+  } else if (connected) {
+    link_href = groupFormLinks[identifier]['connected'];
+  }
+  $(identifier + " .form_link").attr('href', link_href);
   $(identifier + " h4").text("Opcja rejestracji dla Ciebie");
 }
 
