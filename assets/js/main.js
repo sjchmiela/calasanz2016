@@ -244,6 +244,8 @@ function updateRegistrationForm(field, val) {
             } else {
               ask(q[5]);
             }
+          } else {
+            ask(q[4]);
           }
         } else if(newState[q[3]] === 'old') {
           // too old
