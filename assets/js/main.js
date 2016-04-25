@@ -36,7 +36,8 @@ $(document).ready(function(){
   $('.datepicker').pickadate({
     selectYears: 30,
     selectMonths: true,
-    max: true,
+    min: '1985-01-01',
+    max: '2015-12-31',
     format: 'yyyy-mm-dd',
   });
 });
