@@ -34,10 +34,10 @@ $(document).ready(function(){
     }
   });
   $('.datepicker').pickadate({
-    selectYears: 30,
+    selectYears: 60,
     selectMonths: true,
-    min: '1985-01-01',
-    max: '2015-12-31',
+    min: '1950-01-01',
+    max: '2010-12-31',
     format: 'yyyy-mm-dd',
   });
 });
