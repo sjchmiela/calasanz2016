@@ -20,13 +20,7 @@ $(document).ready(function(){
       var age = wyd_beginning.diff(birthdate, 'years');
       $('#age span').text(age);
       document.birthdate_moment = birthdate;
-      if(birthdate.isBefore('1986-07-25')) {
-        updateRegistrationForm('birthdate', 'old');
-      } else if(birthdate.isSameOrBefore('1998-07-25')) {
-        updateRegistrationForm('birthdate', 'mature');
-      } else if(birthdate.isAfter('1998-07-25')) {
-        updateRegistrationForm('birthdate', 'immature');
-      }
+      updateRegistrationForm('birthdate', birthdate);
     } else if (this.name == 'lodging') {
       updateRegistrationForm('lodging', (this.value == '1'));
     } else if (this.name == 'participation') {
@@ -137,9 +131,29 @@ function updateRegistrationForm(field, val) {
     return;
   }
 
+  var b02 = moment('2002-07-25', 'YYYY-MM-DD');
+  var b00 = moment('2000-07-25', 'YYYY-MM-DD');
+  var b98 = moment('1998-07-25', 'YYYY-MM-DD');
+  var b86 = moment('1986-07-25', 'YYYY-MM-DD');
+
   if(newState[q[0]] === true) {
     // current_student
-    if(newState[q[3]] === 'immature') {
+    if (newState[q[3]] === undefined) {
+      ask(q[3]);
+    } else if(newState[q[3]].isAfter(b02)) {
+      group('#tooYoung');
+    } else if (newState[q[3]].isAfter(b00)) {
+      if(newState[q[5]] === 'full') {
+        // info22
+        group('#info22', newState[q[0]], newState[q[1]], newState[q[2]]);
+      } else if (newState[q[5]] === 'part') {
+        // info23
+        group('#info23', newState[q[0]], newState[q[1]], newState[q[2]]);
+      } else {
+        // ask participation
+        ask(q[5]);
+      }
+    } else if (newState[q[3]].isAfter(b98)) {
       if(newState[q[4]] === true) {
         // infoA2nocleg1
         group('#infoA2nocleg1', newState[q[0]], newState[q[1]], newState[q[2]]);
@@ -157,34 +171,47 @@ function updateRegistrationForm(field, val) {
       } else {
         ask(q[4]);
       }
-    } else if(newState[q[3]] === 'mature') {
+    } else if (newState[q[3]].isAfter(b86)) {
       if(newState[q[4]] === true) {
-        // infoA2nocleg2
-        group('#infoA2nocleg2', newState[q[0]], newState[q[1]], newState[q[2]]);
+        // infoA2nocleg1
+        group('#infoA2nocleg1', newState[q[0]], newState[q[1]], newState[q[2]]);
       } else if(newState[q[4]] === false) {
         if(newState[q[5]] === 'full') {
-          // info20
-          group('#info20', newState[q[0]], newState[q[1]], newState[q[2]]);
+          // info22
+          group('#info22', newState[q[0]], newState[q[1]], newState[q[2]]);
         } else if (newState[q[5]] === 'part') {
-          // info21
-          group('#info21', newState[q[0]], newState[q[1]], newState[q[2]]);
+          // info23
+          group('#info23', newState[q[0]], newState[q[1]], newState[q[2]]);
         } else {
+          // ask participation
           ask(q[5]);
         }
       } else {
         ask(q[4]);
       }
-    } else if(newState[q[3]] === 'old') {
-      // too old
+    } else if (newState[q[3]].isSameOrBefore(b86)){
       group('#tooOld');
-    } else {
-      ask(q[3]);
     }
   } else if (newState[q[0]] === false) {
     // maybe alumnus
     if(newState[q[1]] === true) {
       // alumnus
-      if(newState[q[3]] === 'immature') {
+      if (newState[q[3]] === undefined) {
+        ask(q[3]);
+      } else if(newState[q[3]].isAfter(b02)) {
+        group('#tooYoung');
+      } else if (newState[q[3]].isAfter(b00)) {
+        if(newState[q[5]] === 'full') {
+          // info22
+          group('#info22', newState[q[0]], newState[q[1]], newState[q[2]]);
+        } else if (newState[q[5]] === 'part') {
+          // info23
+          group('#info23', newState[q[0]], newState[q[1]], newState[q[2]]);
+        } else {
+          // ask participation
+          ask(q[5]);
+        }
+      } else if (newState[q[3]].isAfter(b98)) {
         if(newState[q[4]] === true) {
           // infoA2nocleg1
           group('#infoA2nocleg1', newState[q[0]], newState[q[1]], newState[q[2]]);
@@ -196,41 +223,40 @@ function updateRegistrationForm(field, val) {
             // info23
             group('#info23', newState[q[0]], newState[q[1]], newState[q[2]]);
           } else {
+            // ask participation
             ask(q[5]);
           }
         } else {
           ask(q[4]);
         }
-      } else if(newState[q[3]] === 'mature') {
+      } else if (newState[q[3]].isAfter(b86)) {
         if(newState[q[4]] === true) {
-          // infoA2nocleg2
-          group('#infoA2nocleg2', newState[q[0]], newState[q[1]], newState[q[2]]);
+          // infoA2nocleg1
+          group('#infoA2nocleg1', newState[q[0]], newState[q[1]], newState[q[2]]);
         } else if(newState[q[4]] === false) {
           if(newState[q[5]] === 'full') {
-            // info20
-            group('#info20', newState[q[0]], newState[q[1]], newState[q[2]]);
+            // info22
+            group('#info22', newState[q[0]], newState[q[1]], newState[q[2]]);
           } else if (newState[q[5]] === 'part') {
-            // info21
-            group('#info21', newState[q[0]], newState[q[1]], newState[q[2]]);
+            // info23
+            group('#info23', newState[q[0]], newState[q[1]], newState[q[2]]);
           } else {
+            // ask participation
             ask(q[5]);
           }
         } else {
           ask(q[4]);
         }
-      } else if(newState[q[3]] === 'old') {
-        // too old
+      } else if (newState[q[3]].isSameOrBefore(b86)){
         group('#tooOld');
-      } else {
-        ask(q[3]);
       }
     } else if(newState[q[1]] === false) {
       if(newState[q[2]] === true) {
         // other connection
-        if(newState[q[3]] === 'immature') {
+        if(newState[q[3]].isAfter(b98)) {
           // no registration for too young
           group('#nonAuthorized');
-        } else if(newState[q[3]] === 'mature') {
+        } else if(newState[q[3]].isAfter(b86)) {
           if(newState[q[4]] === true) {
             // infoA2nocleg2
             group('#infoA2nocleg2', newState[q[0]], newState[q[1]], newState[q[2]]);
@@ -247,7 +273,7 @@ function updateRegistrationForm(field, val) {
           } else {
             ask(q[4]);
           }
-        } else if(newState[q[3]] === 'old') {
+        } else if(newState[q[3]].isSameOrBefore(b86)) {
           // too old
           group('#tooOld');
         } else {
