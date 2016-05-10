@@ -173,15 +173,15 @@ function updateRegistrationForm(field, val) {
       }
     } else if (newState[q[3]].isAfter(b86)) {
       if(newState[q[4]] === true) {
-        // infoA2nocleg1
-        group('#infoA2nocleg1', newState[q[0]], newState[q[1]], newState[q[2]]);
+        // infoA2nocleg2
+        group('#infoA2nocleg2', newState[q[0]], newState[q[1]], newState[q[2]]);
       } else if(newState[q[4]] === false) {
         if(newState[q[5]] === 'full') {
-          // info22
-          group('#info22', newState[q[0]], newState[q[1]], newState[q[2]]);
+          // info20
+          group('#info20', newState[q[0]], newState[q[1]], newState[q[2]]);
         } else if (newState[q[5]] === 'part') {
-          // info23
-          group('#info23', newState[q[0]], newState[q[1]], newState[q[2]]);
+          // info21
+          group('#info21', newState[q[0]], newState[q[1]], newState[q[2]]);
         } else {
           // ask participation
           ask(q[5]);
@@ -231,15 +231,15 @@ function updateRegistrationForm(field, val) {
         }
       } else if (newState[q[3]].isAfter(b86)) {
         if(newState[q[4]] === true) {
-          // infoA2nocleg1
-          group('#infoA2nocleg1', newState[q[0]], newState[q[1]], newState[q[2]]);
+          // infoA2nocleg2
+          group('#infoA2nocleg2', newState[q[0]], newState[q[1]], newState[q[2]]);
         } else if(newState[q[4]] === false) {
           if(newState[q[5]] === 'full') {
-            // info22
-            group('#info22', newState[q[0]], newState[q[1]], newState[q[2]]);
+            // info20
+            group('#info20', newState[q[0]], newState[q[1]], newState[q[2]]);
           } else if (newState[q[5]] === 'part') {
-            // info23
-            group('#info23', newState[q[0]], newState[q[1]], newState[q[2]]);
+            // info21
+            group('#info21', newState[q[0]], newState[q[1]], newState[q[2]]);
           } else {
             // ask participation
             ask(q[5]);
