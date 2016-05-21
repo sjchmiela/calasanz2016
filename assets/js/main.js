@@ -253,7 +253,9 @@ function updateRegistrationForm(field, val) {
     } else if(newState[q[1]] === false) {
       if(newState[q[2]] === true) {
         // other connection
-        if(newState[q[3]].isAfter(b98)) {
+        if (newState[q[3]] === undefined) {
+          ask(q[3]);
+        } else if(newState[q[3]].isAfter(b98)) {
           // no registration for too young
           group('#nonAuthorized');
         } else if(newState[q[3]].isAfter(b86)) {
