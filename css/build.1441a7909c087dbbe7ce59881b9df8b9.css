@@ -1,1 +1,8 @@
-[object Object]
+// I'm sorry, the static page generator library developed too far to
+// spend time conforming this site to the newest versions and the build
+// file was just `[object Object]`. Let's import the files the CSS way.
+@import "/css/default.css";
+@import "/css/nivo-lightbox.css";
+@import "/css/classic.css";
+@import "/css/classic.date.css";
+@import "/css/master.css";
